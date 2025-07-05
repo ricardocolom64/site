@@ -1,30 +1,146 @@
+import Spline from '@splinetool/react-spline/next';
 import Image from "next/image";
 
 export default function Home() {
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
+      <main className="flex flex-col gap-[64px] row-start-2 items-center sm:items-start">
+        {/* <div className="w-[960px]">
+          <Spline
+            scene="https://prod.spline.design/e8c2n7YKrIwpp7zX/scene.splinecode"
+          />
+        </div> */}
+        <div className="w-2xl">
+          <div className="text-7xl font-bold tracking-tight">
+            Ricardo Colom
+          </div>
+          <div className="text-4xl font-extralight tracking-tight">
+            Software Engineer
+          </div>
+        </div>
+        <div className="w-2xl text-lg">
+          Hey, I’m Rick.
+          <br />
+          <br />
+          I build full-stack apps with a strong focus on scalable, efficient, and maintainable backend systems. I solve real business problems with code that delivers.
+          <br />
+          <br />
+          Above all, I care about getting better at what I do every day.
+        </div>
+        <div className="w-2xl">
+          <div className="text-4xl font-bold">
+            Work Experience
+          </div>
+          <div className="mt-8">
+            <div className="flex justify-between">
+              <div className="text-2xl font-bold">
+                Kaseya
+              </div>
+              <div className="text-lg font-medium self-end">
+                2022 - Present
+              </div>
+            </div>
+            <div className="flex flex-col gap-6">
+              {/* SE II Block */}
+              <div className="flex flex-col">
+                <div className="font-light flex justify-between font-[family-name:var(--font-geist-mono)]">
+                  <div>
+                    Software Engineer II
+                  </div>
+                  <div>
+                    Spring 2024 - Present
+                  </div>
+                </div>
+                <div className="list-inside flex flex-col self-center w-xl mt-6 gap-6">
+                  <li>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  </li>
+                  <li>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  </li>
+                </div>
+              </div>
+              {/* SE I Block */}
+              <div className="flex flex-col">
+                <div className="font-light flex justify-between font-[family-name:var(--font-geist-mono)]">
+                  <div>
+                    Software Engineer I
+                  </div>
+                  <div>
+                    Fall 2022 - Spring 2024
+                  </div>
+                </div>
+                <div className="list-inside flex flex-col self-center w-xl mt-6 gap-6">
+                  <li>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  </li>
+                  <li>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  </li>
+                </div>
+              </div>
+              {/* Tools */}
+              <div className="flex flex-col">
+                <div className="self-center font-bold">
+                  Tools
+                </div>
+                <div className="flex flex-col font-bold mt-6 gap-2">
+                  <div className="flex flex-row self-center w-lg justify-between">
+                    <div>
+                      PHP
+                    </div>
+                    <div>
+                      Symfony
+                    </div>
+                    <div>
+                      PHPUnit
+                    </div>
+                    <div>
+                      REST APIs
+                    </div>
+                    <div>
+                      Docker
+                    </div>
+                  </div>
+                  <div className="flex flex-row self-center w-lg justify-between">
+                    <div>
+                      React
+                    </div>
+                    <div>
+                      TypeScript
+                    </div>
+                    <div>
+                      MySQL
+                    </div>
+                    <div>
+                      Puppet
+                    </div>
+                    <div>
+                      Redis
+                    </div>
+                  </div>
+                  <div className="flex flex-row self-center w-lg justify-between">
+                    <div>
+                      Pytest
+                    </div>
+                    <div>
+                      Gitlab CI/CD
+                    </div>
+                    <div>
+                      Linux Server
+                    </div>
+                    <div>
+                      Snyk
+                    </div>
+                    <div>
+                      DataDog
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         <div className="flex gap-4 items-center flex-col sm:flex-row">
           <a
             className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
