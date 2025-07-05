@@ -1,5 +1,8 @@
 import Spline from '@splinetool/react-spline/next';
 import Image from "next/image";
+import WorkExperience from './components/WorkExperience';
+import Header from './components/Header';
+import Projects from './components/Projects';
 
 export default function Home() {
   return (
@@ -10,138 +13,10 @@ export default function Home() {
             scene="https://prod.spline.design/e8c2n7YKrIwpp7zX/scene.splinecode"
           />
         </div> */}
-        <div className="w-2xl">
-          <div className="text-7xl font-bold tracking-tight">
-            Ricardo Colom
-          </div>
-          <div className="text-4xl font-extralight tracking-tight">
-            Software Engineer
-          </div>
-        </div>
-        <div className="w-2xl text-lg">
-          Hey, I’m Rick.
-          <br />
-          <br />
-          I build full-stack apps with a strong focus on scalable, efficient, and maintainable backend systems. I solve real business problems with code that delivers.
-          <br />
-          <br />
-          Above all, I care about getting better at what I do every day.
-        </div>
-        <div className="w-2xl">
-          <div className="text-4xl font-bold">
-            Work Experience
-          </div>
-          <div className="mt-8">
-            <div className="flex justify-between">
-              <div className="text-2xl font-bold">
-                Kaseya
-              </div>
-              <div className="text-lg font-medium self-end">
-                2022 - Present
-              </div>
-            </div>
-            <div className="flex flex-col gap-6">
-              {/* SE II Block */}
-              <div className="flex flex-col">
-                <div className="font-light flex justify-between font-[family-name:var(--font-geist-mono)]">
-                  <div>
-                    Software Engineer II
-                  </div>
-                  <div>
-                    Spring 2024 - Present
-                  </div>
-                </div>
-                <div className="list-inside flex flex-col self-center w-xl mt-6 gap-6">
-                  <li>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  </li>
-                  <li>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  </li>
-                </div>
-              </div>
-              {/* SE I Block */}
-              <div className="flex flex-col">
-                <div className="font-light flex justify-between font-[family-name:var(--font-geist-mono)]">
-                  <div>
-                    Software Engineer I
-                  </div>
-                  <div>
-                    Fall 2022 - Spring 2024
-                  </div>
-                </div>
-                <div className="list-inside flex flex-col self-center w-xl mt-6 gap-6">
-                  <li>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  </li>
-                  <li>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  </li>
-                </div>
-              </div>
-              {/* Tools */}
-              <div className="flex flex-col">
-                <div className="self-center font-bold">
-                  Tools
-                </div>
-                <div className="flex flex-col font-bold mt-6 gap-2">
-                  <div className="flex flex-row self-center w-lg justify-between">
-                    <div>
-                      PHP
-                    </div>
-                    <div>
-                      Symfony
-                    </div>
-                    <div>
-                      PHPUnit
-                    </div>
-                    <div>
-                      REST APIs
-                    </div>
-                    <div>
-                      Docker
-                    </div>
-                  </div>
-                  <div className="flex flex-row self-center w-lg justify-between">
-                    <div>
-                      React
-                    </div>
-                    <div>
-                      TypeScript
-                    </div>
-                    <div>
-                      MySQL
-                    </div>
-                    <div>
-                      Puppet
-                    </div>
-                    <div>
-                      Redis
-                    </div>
-                  </div>
-                  <div className="flex flex-row self-center w-lg justify-between">
-                    <div>
-                      Pytest
-                    </div>
-                    <div>
-                      Gitlab CI/CD
-                    </div>
-                    <div>
-                      Linux Server
-                    </div>
-                    <div>
-                      Snyk
-                    </div>
-                    <div>
-                      DataDog
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
+        <Header />
+        <WorkExperience />
+        <Projects />
+        {/* <div className="flex gap-4 items-center flex-col sm:flex-row">
           <a
             className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
             href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
@@ -165,9 +40,9 @@ export default function Home() {
           >
             Read our docs
           </a>
-        </div>
+        </div> */}
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
+      {/* <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
           href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
@@ -213,7 +88,7 @@ export default function Home() {
           />
           Go to nextjs.org →
         </a>
-      </footer>
+      </footer> */}
     </div>
   );
 }

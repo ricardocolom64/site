@@ -1,0 +1,26 @@
+import AgeCounter from "./AgeCounter";
+
+export default function Header() {
+    return (
+        <>
+            <div className="w-2xl">
+                <div className="text-7xl font-bold tracking-tight">
+                    Ricardo Colom
+                </div>
+                <div className="text-4xl font-extralight tracking-tight">
+                    Software Engineer
+                </div>
+            </div>
+            <div className="w-2xl text-lg">
+                Hey, I’m Rick.{" "}
+                <AgeCounter />
+                <br />
+                <br />
+                I build full-stack apps with a strong focus on scalable, efficient, and maintainable backend systems. I solve real business problems with code that delivers.
+                <br />
+                <br />
+                Above all, I care about getting better at what I do every day.
+            </div>
+        </>
+    )
+}
