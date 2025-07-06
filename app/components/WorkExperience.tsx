@@ -1,11 +1,12 @@
 export default function WorkExperience() {
     return (
         <div className="w-2xl">
-            <div className="flex justify-between">
+            <div className="flex justify-between relative">
                 <div className="text-4xl font-bold">
                     Work Experience
                 </div>
-                <a href="#" className="text-xl font-medium self-end opacity-50 hover:underline hover:opacity-100 transition-all">
+                <div className="absolute -right-12 -bottom-4 self-end w-42 h-16 bg-[linear-gradient(to_right,#77777725_1px,transparent_1px),linear-gradient(to_bottom,#77777725_1px,transparent_1px)] bg-[size:20px_20px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_50%,transparent_100%)]"></div>
+                <a href="#" className="z-10 text-xl font-medium self-end hover:underline transition-all">
                     Résumé
                 </a>
             </div>
