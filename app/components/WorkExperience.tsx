@@ -1,8 +1,13 @@
 export default function WorkExperience() {
     return (
         <div className="w-2xl">
-            <div className="text-4xl font-bold">
-                Work Experience
+            <div className="flex justify-between">
+                <div className="text-4xl font-bold">
+                    Work Experience
+                </div>
+                <a href="#" className="text-xl font-medium self-end opacity-50 hover:underline hover:opacity-100 transition-all">
+                    Résumé
+                </a>
             </div>
             <div className="mt-8">
                 <div className="flex justify-between">
@@ -72,59 +77,58 @@ export default function WorkExperience() {
                         </div>
                     </div>
                     {/* Tools */}
-                    <div className="flex flex-col">
-                        <div className="border-1 border-[#1F1F1F] rounded-lg">
-                            <div className="flex flex-col font-bold my-6 font-[family-name:var(--font-geist-mono)] gap-2">
-                                <div className="flex flex-row self-center gap-10">
-                                    <div>
-                                        PHP
-                                    </div>
-                                    <div>
-                                        Symfony
-                                    </div>
-                                    <div>
-                                        PHPUnit
-                                    </div>
-                                    <div>
-                                        REST APIs
-                                    </div>
-                                    <div>
-                                        Docker
-                                    </div>
+                    <div className="flex flex-col relative">
+                        <div className="absolute inset-0 bg-[linear-gradient(to_right,#77777750_1px,transparent_1px),linear-gradient(to_bottom,#77777750_1px,transparent_1px)] bg-[size:20px_20px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_50%,transparent_100%)]"></div>
+                        <div className="z-10 flex flex-col font-bold my-6 font-[family-name:var(--font-geist-mono)] gap-2">
+                            <div className="flex flex-row self-center gap-10">
+                                <div>
+                                    PHP
                                 </div>
-                                <div className="flex flex-row self-center gap-10">
-                                    <div>
-                                        React
-                                    </div>
-                                    <div>
-                                        TypeScript
-                                    </div>
-                                    <div>
-                                        MySQL
-                                    </div>
-                                    <div>
-                                        Puppet
-                                    </div>
-                                    <div>
-                                        Redis
-                                    </div>
+                                <div>
+                                    Symfony
                                 </div>
-                                <div className="flex flex-row self-center gap-10">
-                                    <div>
-                                        WSL
-                                    </div>
-                                    <div>
-                                        Gitlab CI/CD
-                                    </div>
-                                    <div>
-                                        Linux Server
-                                    </div>
-                                    <div>
-                                        Snyk
-                                    </div>
-                                    <div>
-                                        DataDog
-                                    </div>
+                                <div>
+                                    PHPUnit
+                                </div>
+                                <div>
+                                    REST APIs
+                                </div>
+                                <div>
+                                    Docker
+                                </div>
+                            </div>
+                            <div className="flex flex-row self-center gap-10">
+                                <div>
+                                    React
+                                </div>
+                                <div>
+                                    TypeScript
+                                </div>
+                                <div>
+                                    MySQL
+                                </div>
+                                <div>
+                                    Puppet
+                                </div>
+                                <div>
+                                    Redis
+                                </div>
+                            </div>
+                            <div className="flex flex-row self-center gap-10">
+                                <div>
+                                    WSL
+                                </div>
+                                <div>
+                                    Gitlab CI/CD
+                                </div>
+                                <div>
+                                    Linux Server
+                                </div>
+                                <div>
+                                    Snyk
+                                </div>
+                                <div>
+                                    DataDog
                                 </div>
                             </div>
                         </div>
