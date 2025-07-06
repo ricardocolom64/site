@@ -19,7 +19,10 @@ export default function Header() {
                 I build full-stack apps with a strong focus on scalable, efficient, and maintainable backend systems. I solve real business problems with code that delivers.
                 <br />
                 <br />
-                Above all, I care about getting better at what I do every day.
+                I enjoy lifting weights, dancing, and hanging out with friends.
+                <br />
+                <br />
+                Above all, I just care about getting better at what I do every day.
             </div>
         </>
     )

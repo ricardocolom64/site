@@ -1,3 +1,50 @@
+function ArrowIcon() {
+    return (
+        <svg
+            width="12"
+            height="12"
+            viewBox="0 0 12 12"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+        >
+            <path
+                d="M2.07102 11.3494L0.963068 10.2415L9.2017 1.98864H2.83807L2.85227 0.454545H11.8438V9.46023H10.2955L10.3097 3.09659L2.07102 11.3494Z"
+                fill="currentColor"
+            />
+        </svg>
+    )
+}
+
+function LocationDotIcon() {
+    return (
+        <svg
+            width="16"
+            height="16"
+            viewBox="0 0 384 512"
+            fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg"
+        >
+            {/* <!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--> */}
+            <path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z" />
+        </svg>
+    )
+}
+
+function LinkIcon() {
+    return (
+        <svg
+            width="20"
+            height="20"
+            viewBox="0 0 640 512"
+            fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg"
+        >
+            {/* <!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--> */}
+            <path d="M579.8 267.7c56.5-56.5 56.5-148 0-204.5c-50-50-128.8-56.5-186.3-15.4l-1.6 1.1c-14.4 10.3-17.7 30.3-7.4 44.6s30.3 17.7 44.6 7.4l1.6-1.1c32.1-22.9 76-19.3 103.8 8.6c31.5 31.5 31.5 82.5 0 114L422.3 334.8c-31.5 31.5-82.5 31.5-114 0c-27.9-27.9-31.5-71.8-8.6-103.8l1.1-1.6c10.3-14.4 6.9-34.4-7.4-44.6s-34.4-6.9-44.6 7.4l-1.1 1.6C206.5 251.2 213 330 263 380c56.5 56.5 148 56.5 204.5 0L579.8 267.7zM60.2 244.3c-56.5 56.5-56.5 148 0 204.5c50 50 128.8 56.5 186.3 15.4l1.6-1.1c14.4-10.3 17.7-30.3 7.4-44.6s-30.3-17.7-44.6-7.4l-1.6 1.1c-32.1 22.9-76 19.3-103.8-8.6C74 372 74 321 105.5 289.5L217.7 177.2c31.5-31.5 82.5-31.5 114 0c27.9 27.9 31.5 71.8 8.6 103.9l-1.1 1.6c-10.3 14.4-6.9 34.4 7.4 44.6s34.4 6.9 44.6-7.4l1.1-1.6C433.5 260.8 427 182 377 132c-56.5-56.5-148-56.5-204.5 0L60.2 244.3z" />
+        </svg>
+    )
+}
+
 export default function WorkExperience() {
     return (
         <div className="w-2xl">
@@ -5,18 +52,38 @@ export default function WorkExperience() {
                 <div className="text-4xl font-bold">
                     Work Experience
                 </div>
-                <div className="absolute -right-12 -bottom-4 self-end w-42 h-16 bg-[linear-gradient(to_right,#77777725_1px,transparent_1px),linear-gradient(to_bottom,#77777725_1px,transparent_1px)] bg-[size:20px_20px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_50%,transparent_100%)]"></div>
-                <a href="#" className="z-10 text-xl font-medium self-end hover:underline transition-all">
-                    Résumé
+                <a href="#" className="flex items-center text-neutral-300 hover:text-neutral-100 transition-all">
+                    <ArrowIcon />
+                    <div className="ml-2 font-medium self-center">
+                        Résumé
+                    </div>
                 </a>
             </div>
             <div className="mt-8">
                 <div className="flex justify-between">
-                    <div className="text-2xl font-bold">
-                        Kaseya
+                    <div className="flex flex-row gap-2 text-2xl font-bold">
+                        <div>
+                            Kaseya
+                        </div>
+                        <a href="https://kaseya.com" target="_blank" rel="noopener noreferrer" className="self-end w-6 h-6 text-neutral-500 hover:text-neutral-100 transition-all">
+                            <LinkIcon />
+                        </a>
                     </div>
-                    <div className="text-lg font-medium self-end">
-                        2022 - Present
+                    <div className="flex flex-row gap-2 text-lg font-medium self-end">
+                        <div className="flex flex-row gap-1">
+                            <div className="self-center">
+                                <LocationDotIcon />
+                            </div>
+                            <>
+                                Miami, FL
+                            </>
+                        </div>
+                        <div>
+                            •
+                        </div>
+                        <div>
+                            2022 - Present
+                        </div>
                     </div>
                 </div>
                 <div className="flex flex-col gap-6">
