@@ -39,10 +39,10 @@ export default function Projects() {
                     <div
                         key={index}
                         onMouseEnter={() => setActiveCard(index)}
-                        className="border border-[#1F1F1F] rounded-lg font-[family-name:var(--font-geist-mono)]"
+                        className={`border border-[#1F1F1F] rounded-lg font-[family-name:var(--font-geist-mono)] transition-all duration-300 ${activeCard === index ? 'w-full' : 'w-20 opacity-50'}`}
                     >
                         <div
-                            className={`h-96 relative transition-all duration-300 ease-in-out overflow-hidden ${activeCard === index ? 'w-100' : 'w-14 opacity-50'}`}
+                            className={`h-96 relative transition-all duration-300 ease-in-out overflow-hidden`}
                         >
                             <div className="w-max absolute top-4 left-[38px] origin-top-left rotate-90 text-sm">
                                 {project.title}
