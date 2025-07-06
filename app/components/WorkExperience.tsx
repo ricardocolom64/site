@@ -78,7 +78,7 @@ export default function WorkExperience() {
                     </div>
                     {/* Tools */}
                     <div className="flex flex-col relative">
-                        <div className="absolute inset-0 bg-[linear-gradient(to_right,#77777750_1px,transparent_1px),linear-gradient(to_bottom,#77777750_1px,transparent_1px)] bg-[size:20px_20px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_50%,transparent_100%)]"></div>
+                        <div className="absolute inset-0 bg-[linear-gradient(to_right,#77777725_1px,transparent_1px),linear-gradient(to_bottom,#77777725_1px,transparent_1px)] bg-[size:20px_20px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_50%,transparent_100%)]"></div>
                         <div className="z-10 flex flex-col font-bold my-6 font-[family-name:var(--font-geist-mono)] gap-2">
                             <div className="flex flex-row self-center gap-10">
                                 <div>
