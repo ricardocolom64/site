@@ -111,7 +111,7 @@ export default function WorkExperience() {
                                 </div>
                                 <div className="flex flex-row self-center gap-10">
                                     <div>
-                                        Pytest
+                                        WSL
                                     </div>
                                     <div>
                                         Gitlab CI/CD
