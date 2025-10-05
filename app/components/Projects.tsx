@@ -80,7 +80,7 @@ export default function Projects() {
                                 {project.title}
                             </div>
                             <div className={`w-full h-full relative`}>
-                                <div className="absolute inset-0 bg-[linear-gradient(to_right,#77777725_1px,transparent_1px),linear-gradient(to_bottom,#77777725_1px,transparent_1px)] bg-[size:20px_20px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_50%,transparent_100%)]"></div>
+                                <div className="absolute z-0 inset-0 bg-[linear-gradient(to_right,#00A57650_1px,transparent_1px),linear-gradient(to_bottom,#00A57650_1px,transparent_1px)] bg-[size:20px_20px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_50%,transparent_100%)]"></div>
                                 {/* <div className={`z-10 bg-yellow-500 absolute origin-center transition-all duration-300 ${activeCard === index && isHovering ? 'opacity-100' : 'opacity-0'}`}>
                                     HOVERING
                                 </div> */}

@@ -3,6 +3,7 @@ import Image from "next/image";
 import WorkExperience from './components/WorkExperience';
 import Header from './components/Header';
 import Projects from './components/Projects';
+import Monitor from './components/Monitor';
 
 export default function Home() {
   return (
@@ -13,7 +14,10 @@ export default function Home() {
             scene="https://prod.spline.design/e8c2n7YKrIwpp7zX/scene.splinecode"
           />
         </div> */}
-        <Header />
+        <div className="flex flex-row gap-[64px]">
+          <Header />
+          <Monitor />
+        </div>
         <WorkExperience />
         <Projects />
         {/* <div className="flex gap-4 items-center flex-col sm:flex-row">
