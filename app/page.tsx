@@ -1,10 +1,7 @@
 "use client";
 
-import Spline from '@splinetool/react-spline/next';
-import Image from "next/image";
 import WorkExperience from './components/WorkExperience';
 import Header from './components/Header';
-import Projects from './components/Projects';
 import Monitor from './components/Monitor';
 import { useEffect, useState } from 'react';
 
@@ -18,11 +15,6 @@ export default function Home() {
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
       <main className="flex flex-col gap-[64px] row-start-2 items-center sm:items-start">
-        {/* <div className="w-[960px]">
-          <Spline
-            scene="https://prod.spline.design/e8c2n7YKrIwpp7zX/scene.splinecode"
-          />
-        </div> */}
         <div className="flex flex-row gap-[64px]">
           <div
             className={`opacity-0 transition-opacity duration-500 ${visible ? "opacity-100" : ""
