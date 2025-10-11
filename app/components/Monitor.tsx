@@ -1,4 +1,81 @@
+"use client";
+
+import { useEffect, useState, useRef } from "react";
+
 export default function Monitor() {
+
+    const socials = [
+        {
+            name: "GitHub",
+            url: "https://github.com/ricardocolom64/"
+        },
+        {
+            name: "LinkedIn",
+            url: "https://www.linkedin.com/in/ricardo-colom/"
+        },
+        {
+            name: "E-mail",
+            url: "mailto:ricardocolom64@gmail.com"
+        }
+    ];
+
+    const [selectedSocial, setSelectedSocial] = useState(0);
+
+    const [pressedButtons, setPressedButtons] = useState({
+        up: false,
+        down: false,
+        left: false,
+        right: false,
+        a: false,
+        b: false
+    });
+
+    const blipRef = useRef<HTMLAudioElement | null>(null);
+    const jumpRef = useRef<HTMLAudioElement | null>(null);
+
+    // Preload once on client
+    useEffect(() => {
+        blipRef.current = new Audio("/sounds/blip.wav");
+        blipRef.current.volume = 0.2;
+        blipRef.current.preload = "auto";
+
+        jumpRef.current = new Audio("/sounds/jump.wav");
+        jumpRef.current.volume = 0.2;
+        jumpRef.current.preload = "auto";
+    }, []);
+
+    const playSound = (ref: React.RefObject<HTMLAudioElement | null>, volume = 0.2) => {
+        if (!ref.current) return;
+        const sound = ref.current.cloneNode(true) as HTMLAudioElement;
+        sound.volume = volume;
+        sound.play();
+    };
+
+    const playBlip = () => playSound(blipRef, 0.2);
+    const playJump = () => playSound(jumpRef, 0.2);
+
+
+    const handleNext = () => {
+        playBlip();
+        setSelectedSocial((curr) => (curr + 1) % socials.length)
+    }
+
+    const handlePrev = () => {
+        playBlip();
+        setSelectedSocial((curr) => (curr - 1 + socials.length) % socials.length)
+    }
+
+    const handleButtonPress = (button: string) => {
+        if (button == "a") {
+            playJump();
+            window.open(socials[selectedSocial].url, "_blank");
+        }
+        setPressedButtons((prev) => ({ ...prev, [button]: true }));
+        setTimeout(() => {
+            setPressedButtons((prev) => ({ ...prev, [button]: false }));
+        }, 100);
+    };
+
     return (
         <div className="flex flex-col">
             <div className="h-6 border-2 border-[#00A576] border-b-0 rounded-t-lg  flex w-[100%] justify-end items-center relative">
@@ -23,15 +100,29 @@ export default function Monitor() {
                             {/* Screen */}
                             <div className="h-[110px] w-[120px] border-2 border-[#1F1F1F] bg-[#0A0A0A] absolute top-19 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
                                 <div className="flex flex-col text-sm font-[family-name:var(--font-geist-mono)] m-4">
-                                    <div className="text-[#00A576] text-shadow-md text-shadow-[#00A576]/50 underline">
-                                        GitHub
-                                    </div>
-                                    <div>
-                                        LinkedIn
-                                    </div>
-                                    <div>
-                                        E-mail
-                                    </div>
+                                    {
+                                        socials.map((social, index) => {
+                                            return selectedSocial == index ? (
+                                                <a
+                                                    key={index}
+                                                    href={social.url}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    onClick={playJump}
+                                                    className="text-[#00A576] text-shadow-md text-shadow-[#00A576]/50 underline transition-colors duration-400"
+                                                >
+                                                    {social.name}
+                                                </a>
+                                            ) : (
+                                                <a
+                                                    key={index}
+                                                    onMouseEnter={() => setSelectedSocial(index)}
+                                                >
+                                                    {social.name}
+                                                </a>
+                                            )
+                                        })
+                                    }
                                 </div>
                             </div>
                             <div className="h-[140px] w-[200px] left-1/2 absolute transform -translate-x-1/2">
@@ -40,23 +131,36 @@ export default function Monitor() {
                                 </div>
                                 <div className="h-[70px] w-[70px] left-2 top-10 absolute">
                                     {/* Up */}
-                                    <div className="h-[24px] w-[24px] rounded-t-sm border-2 border-b-0 border-[#1F1F1F] left-1/2 top-0 transform -translate-x-1/2 absolute">
-                                        <div className="w-0 h-0 border-l-[6px] border-l-transparent border-b-[8px] border-b-[#1F1F1F] border-r-[6px] border-r-transparent left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 absolute">
+                                    <div
+                                        onClick={() => { handlePrev(); handleButtonPress("up"); }}
+                                        className="group hover:border-neutral-500 transition-colors duration-200 h-[24px] w-[24px] rounded-t-sm border-2 border-b-0 border-[#1F1F1F] left-1/2 top-0 transform -translate-x-1/2 absolute"
+                                    >
+                                        <div className={`${pressedButtons.up ? "border-b-[#00A576] duration-200" : "border-b-[#1F1F1F] group-hover:border-t-neutral-500 duration-400"} transition-colors w-0 h-0 border-l-[6px] border-l-transparent border-b-[8px] border-r-[6px] border-r-transparent left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 absolute`}>
                                         </div>
                                     </div>
                                     {/* Left */}
-                                    <div className="h-[24px] w-[24px] rounded-l-sm border-2 border-r-0 border-[#1F1F1F] left-0 top-1/2 transform -translate-y-1/2 absolute">
-                                        <div className="w-0 h-0 border-t-[6px] border-t-transparent border-r-[8px] border-r-[#1F1F1F] border-b-[6px] border-b-transparent left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 absolute">
+                                    <div
+                                        onClick={() => { handleButtonPress("left"); }}
+                                        className="group hover:border-neutral-500 transition-colors duration-200 h-[24px] w-[24px] rounded-l-sm border-2 border-r-0 border-[#1F1F1F] left-0 top-1/2 transform -translate-y-1/2 absolute"
+                                    >
+                                        <div className={`${pressedButtons.left ? "border-r-[#00A576] duration-200" : "border-r-[#1F1F1F] group-hover:border-r-neutral-500 duration-400"} transition-colors w-0 h-0 border-t-[6px] border-t-transparent border-r-[8px] border-b-[6px] border-b-transparent left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 absolute`}>
                                         </div>
                                     </div>
                                     {/* Right */}
-                                    <div className="h-[24px] w-[24px] rounded-r-sm border-2 border-l-0 border-[#1F1F1F] right-0 top-1/2 transform -translate-y-1/2 absolute">
-                                        <div className="w-0 h-0 border-t-[6px] border-t-transparent border-l-[8px] border-l-[#1F1F1F] border-b-[6px] border-b-transparent left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 absolute">
+                                    <div
+                                        onClick={() => { handleButtonPress("right"); }}
+                                        className="group hover:border-neutral-500 transition-colors duration-200 h-[24px] w-[24px] rounded-r-sm border-2 border-l-0 border-[#1F1F1F] right-0 top-1/2 transform -translate-y-1/2 absolute"
+                                    >
+                                        <div className={`${pressedButtons.right ? "border-l-[#00A576] duration-200" : "border-l-[#1F1F1F] group-hover:border-l-neutral-500 duration-400"} transition-colors w-0 h-0 border-t-[6px] border-t-transparent border-l-[8px] border-b-[6px] border-b-transparent left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 absolute`}>
                                         </div>
                                     </div>
                                     {/* Down */}
-                                    <div className="h-[24px] w-[24px] rounded-b-sm border-2 border-t-0 border-[#1F1F1F] left-1/2 bottom-0 transform -translate-x-1/2 absolute">
-                                        <div className="w-0 h-0 border-l-[6px] border-l-transparent border-t-[8px] border-t-[#1F1F1F] border-r-[6px] border-r-transparent left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 absolute">
+                                    <div
+                                        onClick={() => { handleNext(); handleButtonPress("down"); }}
+                                        className="group hover:border-neutral-500 transition-colors duration-200 h-[24px] w-[24px] rounded-b-sm border-2 border-t-0 border-[#1F1F1F] left-1/2 bottom-0 transform -translate-x-1/2 absolute"
+                                    >
+                                        <div className={
+                                            `${pressedButtons.down ? "border-t-[#00A576] duration-200" : "border-t-[#1F1F1F] group-hover:border-t-neutral-500 duration-400"} transition-colors w-0 h-0 border-l-[6px] border-l-transparent border-t-[8px] border-r-[6px] border-r-transparent left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 absolute`}>
                                         </div>
                                     </div>
                                     {/* Center */}
@@ -64,16 +168,18 @@ export default function Monitor() {
                                     </div>
                                 </div>
                                 {/* A and B */}
-                                <div className="h-[70px] w-[70px] right-2 top-10 absolute font-[family-name:var(--font-geist-mono)]">
+                                <div className="h-[70px] w-[70px] right-2 top-10 absolute font-[family-name:var(--font-geist-mono)] select-none">
                                     {/* B */}
-                                    <div className="h-[30px] w-[30px] rounded-full border-2 border-[#1F1F1F] left-0 top-7 absolute">
-                                        <div className="text-[#1F1F1F] font-bold absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 ">
+                                    <div className="group hover:border-neutral-500 transition-colors duration-200 h-[30px] w-[30px] rounded-full border-2 border-[#1F1F1F] left-0 top-7 absolute">
+                                        <div className="text-[#1F1F1F] group-hover:text-neutral-500 duration-400 font-bold absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 ">
                                             B
                                         </div>
                                     </div>
                                     {/* A */}
-                                    <div className="h-[30px] w-[30px] rounded-full border-2 border-[#1F1F1F] right-0 bottom-7 absolute">
-                                        <div className="text-[#1F1F1F] font-bold absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 ">
+                                    <div
+                                        onClick={() => handleButtonPress("a")}
+                                        className="group hover:border-neutral-500 transition-colors duration-200 h-[30px] w-[30px] rounded-full border-2 border-[#1F1F1F] right-0 bottom-7 absolute">
+                                        <div className="text-[#1F1F1F] group-hover:text-neutral-500 duration-400 font-bold absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
                                             A
                                         </div>
                                     </div>

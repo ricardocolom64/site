@@ -123,7 +123,7 @@ export default function WorkExperience() {
                                     Containerized each of our microservices using Docker to streamline development and testing. Leveraged Puppet to ensure stable, conistent infrastructure upon deployment.
                                 </li>
                                 <li>
-                                    Served as a primary POC for high priority production issues impacting communication within our backup fleet to ensure maximum uptime and service reliability.
+                                    Served as primary point of contact for high-priority production issues affecting data protection and fleet communication, ensuring maximum uptime and service reliability.
                                 </li>
                                 <li>
                                     <i>Refined all Software Engineer I skills...</i>
@@ -133,7 +133,7 @@ export default function WorkExperience() {
                         {/* SE I Block */}
                         <div className="flex flex-col">
                             <div className="font-light flex justify-between font-[family-name:var(--font-geist-mono)]">
-                                <div>
+                                <div className="text-shadow-md text-shadow-neutral-100/50">
                                     Software Engineer I
                                 </div>
                                 <div>
