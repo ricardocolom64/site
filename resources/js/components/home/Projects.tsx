@@ -69,7 +69,7 @@ export default function Projects() {
                             setIsHovering(true);
                         }}
                         onMouseLeave={() => setIsHovering(false)}
-                        className={`border border-[#1F1F1F] rounded-lg font-[family-name:var(--font-code)] transition-all duration-500 ease-in-out ${activeCard === index ? 'w-full' : 'w-20 opacity-50'}`}
+                        className={`border border-[#1F1F1F] rounded-lg font-code transition-all duration-500 ease-in-out ${activeCard === index ? 'w-full' : 'w-20 opacity-50'}`}
                     >
                         <div
                             className={`h-96 relative transition-all overflow-hidden`}

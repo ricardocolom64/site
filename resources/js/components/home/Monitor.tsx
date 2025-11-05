@@ -70,7 +70,7 @@ export default function Monitor() {
                             </div>
                             {/* Screen */}
                             <div className="h-[110px] w-[120px] border-2 border-neo-grey-secondary bg-background absolute top-19 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                                <div className="flex flex-col text-sm font-[family-name:var(--font-code)] m-4">
+                                <div className="flex flex-col text-sm font-code m-4">
                                     {
                                         socials.map((social, index) => {
                                             return selectedSocial == index ? (
@@ -138,7 +138,7 @@ export default function Monitor() {
                                     </div>
                                 </div>
                                 {/* A and B */}
-                                <div className="h-[70px] w-[70px] right-2 top-10 absolute font-[family-name:var(--font-code)] select-none">
+                                <div className="h-[70px] w-[70px] right-2 top-10 absolute font-code select-none">
                                     {/* B */}
                                     <div className="group hover:border-neutral-500 transition-colors duration-200 h-[30px] w-[30px] rounded-full border-2 border-[#1F1F1F] left-0 top-7 absolute">
                                         <div className="text-[#1F1F1F] group-hover:text-neutral-500 duration-400 font-bold absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 ">

@@ -98,7 +98,7 @@ export default function WorkExperience() {
                     <div className="flex flex-col gap-6">
                         {/* SE II Block */}
                         <div className="flex flex-col">
-                            <div className="font-light flex justify-between font-[family-name:var(--font-code)]">
+                            <div className="font-light flex justify-between font-code">
                                 <div className="text-shadow-md text-shadow-neutral-100/50">
                                     Software Engineer II
                                 </div>
@@ -132,7 +132,7 @@ export default function WorkExperience() {
                         </div>
                         {/* SE I Block */}
                         <div className="flex flex-col">
-                            <div className="font-light flex justify-between font-[family-name:var(--font-code)]">
+                            <div className="font-light flex justify-between font-code">
                                 <div className="text-shadow-md text-shadow-neutral-100/50">
                                     Software Engineer I
                                 </div>
@@ -155,7 +155,7 @@ export default function WorkExperience() {
                         </div>
                         {/* Tools */}
                         <div className="flex flex-col">
-                            <div className="flex flex-col font-bold my-6 font-[family-name:var(--font-code)] gap-2">
+                            <div className="flex flex-col font-bold my-6 font-code gap-2">
                                 {[
                                     ['PHP', 'Symfony', 'PHPUnit', 'REST APIs', 'Docker'],
                                     ['React', 'TypeScript', 'MySQL', 'Puppet', 'Redis'],
