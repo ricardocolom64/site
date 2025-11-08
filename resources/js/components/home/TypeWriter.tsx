@@ -1,23 +1,28 @@
 import { useEffect, useState } from 'react';
 
 
-// TODO: Add cursor and caret
-// Make this a hook?
+type TypeWriterProps = {
+    debug?: boolean,
+    onTypingDone?: () => void;
+};
 
-export default function TypeWriter({ debug = false }) {
+export default function TypeWriter({ debug = false, onTypingDone }: TypeWriterProps) {
     const phrases = [
-        { phrase: "./", charDelay: 50 },
-        { phrase: "rickcolom.sh", charDelay: 100 },
+        { phrase: "./", charDelay: 300 },
+        { phrase: "ricardocolom.sh", charDelay: 50 },
     ];
+    const initialDelay = 500;
     const phraseDelay = 500;
 
     const [isWriting, setIsWriting] = useState(false);
+    const [typingDone, setTypingDone] = useState(false);
     const [phraseIndex, setPhraseIndex] = useState(0);
     const [charIndex, setCharIndex] = useState(0);
     const [displayedText, setDisplayedText] = useState("");
 
     function reset() {
         setIsWriting(false);
+        setTypingDone(false);
         setPhraseIndex(0);
         setCharIndex(0);
         setDisplayedText("");
@@ -51,9 +56,19 @@ export default function TypeWriter({ debug = false }) {
     }, [isWriting, phraseIndex, charIndex, phrases]);
 
     useEffect(
-        () => { setIsWriting(true) }
+        () => {
+            const timeout = setTimeout(() => setIsWriting(true), initialDelay);
+            return () => clearTimeout(timeout);
+        }
         , []
     )
+
+    useEffect(() => {
+        if (!isWriting && phraseIndex >= phrases.length) {
+            setTypingDone(true);
+            onTypingDone?.();
+        }
+    }, [isWriting, phraseIndex, onTypingDone]);
 
     return (
         <div>
@@ -73,26 +88,39 @@ export default function TypeWriter({ debug = false }) {
                     </button>
                 </>
             }
-            <div className="flex space-x-[1px]">
+            <div className="flex space-x-[1px] font-code h-6 w-60">
+                <span className="inline-block mr-1 text-neo">$</span>
+
                 {displayedText.split("").map((char, i) => (
                     <span
                         key={i}
-                        className="font-code inline-block translate-y-1 animate-[fadeDown_0.1s_ease-out]"
+                        className="inline-block animate-[fadeDown_0.1s_ease-out]"
                     >
                         {char}
                     </span>
                 ))}
 
+                {
+                    !typingDone &&
+                    <span
+                        className={`inline-block mt-[3px] ml-[2px] h-[18px] w-[4px] bg-current transition-opacity duration-200
+                        ${isWriting ? "opacity-100" : "animate-blink"}`}
+                    >
+                        &nbsp;
+                    </span>
+                }
+
                 <style>{`
                     @keyframes fadeDown {
-                    from {
-                        opacity: 0;
-                        transform: translateY(-0.25em);
+                        from { opacity: 0; transform: translateY(-0.25em); }
+                        to { opacity: 1; transform: translateY(0); }
                     }
-                    to {
-                        opacity: 1;
-                        transform: translateY(0);
+                    @keyframes blink {
+                        0%, 50%, 100% { opacity: 1; }
+                        25%, 75% { opacity: 0; }
                     }
+                    .animate-blink {
+                        animation: blink 1s ease-out infinite;
                     }
                 `}
                 </style>
