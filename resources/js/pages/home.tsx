@@ -18,7 +18,7 @@ export default function Home() {
 
     return (
         <div className="flex flex-col items-center justify-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-            <div className={`${typingDone ? "mt-0" : "mt-[40vh]"} transition-all duration-500 w-260 ease-in-out`}>
+            <div className={`${typingDone ? "mt-0" : "mt-[40vh]"} transition-all duration-400 w-260 ease-in-out`}>
                 <TypeWriter onTypingDone={() => setTypingDone(true)} />
             </div>
             <main className="flex flex-col gap-[64px] row-start-2 items-center sm:items-start">
