@@ -11,7 +11,7 @@ export default function TypeWriter({ debug = false, onTypingDone }: TypeWriterPr
         { phrase: "./", charDelay: 300 },
         { phrase: "ricardocolom.sh", charDelay: 50 },
     ];
-    const initialDelay = 500;
+    const initialDelay = 1000;
     const phraseDelay = 500;
 
     const [isWriting, setIsWriting] = useState(false);

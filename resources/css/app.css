@@ -9,8 +9,11 @@
         'Segoe UI Symbol', 'Noto Color Emoji';
     --font-code: 'Geist Mono', ui-monospace, SFMono-Regular, 'Courier New', monospace;
 
+    --color-dark: #0a0a0a;
+    --color-dark-text: #ededed;
+
     --color-neo: #00c187;
-    --color-neo-secondary: #00c18740;
+    --color-neo-secondary: #00c18730;
     --color-neo-grey: #0f0f0f;
     --color-neo-grey-secondary: #1f1f1f;
 }

@@ -49,8 +49,8 @@ export default function Monitor() {
 
     return (
         <div className="flex flex-col">
-            <div className="h-6 border-2 border-neo border-b-0 rounded-t-lg  flex w-[100%] justify-end items-center relative">
-                <div className="absolute left-4 bottom-1 bg-background text-shadow-md text-shadow-neo/50 shadow-[0px_0px_20px_10px_#0a0a0a] w-max h-max text-2xl font-bold px-1">
+            <div className="bg-dark/50 h-6 border-2 border-neo border-b-0 rounded-t-lg  flex w-[100%] justify-end items-center relative">
+                <div className="absolute left-4 bottom-1 bg-background text-shadow-sm text-shadow-neo/50 shadow-[0px_0px_20px_0px_#0A0A0A] w-max h-max text-2xl font-bold px-1">
                     Socials
                 </div>
                 <div className="flex flex-row gap-1.5 pr-1.5">
@@ -59,8 +59,7 @@ export default function Monitor() {
                     <div className="aspect-square h-3 border-2 border-neo rounded-full"></div>
                 </div>
             </div>
-            <div className="relative">
-                <div className="absolute z-0 inset-0 bg-neo-grid"></div>
+            <div className="bg-dark/50 relative">
                 <div className="border-2 border-neo rounded-b-lg px-8 py-6 flex flex-col justify-center items-center relative">
                     <div className="h-[300px] w-[230px] bg-background rounded-t-[3%] border-2 border-b-0 border-neo-grey-secondary relative">
                         <div className="absolute top-6 left-1/2 transform -translate-x-1/2">

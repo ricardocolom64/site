@@ -56,8 +56,8 @@ export default function WorkExperience() {
                     </div>
                 </a>
             </div>
-            <div className="h-6 border-2 border-neo border-b-0 rounded-t-lg  flex w-[100%] justify-end items-center relative">
-                <div className="absolute left-4 bottom-1 bg-background text-shadow-md text-shadow-neo/50 shadow-[0px_0px_20px_10px_#000000] w-max h-max text-2xl font-bold px-1">
+            <div className="bg-dark/50 h-6 border-2 border-neo border-b-0 rounded-t-lg  flex w-[100%] justify-end items-center relative">
+                <div className="absolute left-4 bottom-1 bg-background text-shadow-sm text-shadow-neo/50 shadow-[0px_0px_20px_0px_#0A0A0A] w-max h-max text-2xl font-bold px-1">
                     Work Experience
                 </div>
                 <div className="flex flex-row gap-1.5 pr-1.5">
@@ -66,11 +66,10 @@ export default function WorkExperience() {
                     <div className="aspect-square h-3 border-2 border-neo rounded-full"></div>
                 </div>
             </div>
-            <div className="p-8 border-2 border-neo rounded-b-lg relative">
-                <div className="absolute z-0 inset-0 bg-neo-grid"></div>
-                <div className="z-10 relative text-shadow-md text-shadow-background">
+            <div className="bg-dark/50 p-8 border-2 border-neo rounded-b-lg relative">
+                <div className="text-shadow-md text-shadow-background">
                     <div className="flex justify-between">
-                        <div className="flex flex-row gap-2 text-2xl font-bold text-neutral-100 text-shadow-md text-shadow-neo/50">
+                        <div className="flex flex-row gap-2 text-2xl font-bold text-shadow-sm text-shadow-neo/50">
                             <div>
                                 Kaseya
                             </div>
@@ -120,7 +119,7 @@ export default function WorkExperience() {
                                     Managed all aspects of developer operations, including repositories, CI/CD pipelines, branching strategies, packaging, and deployments.
                                     <br />
                                     <br />
-                                    Containerized each of our microservices using Docker to streamline development and testing. Leveraged Puppet to ensure consistent infrastructure upon deployment to self-managed Ubuntu VMs.
+                                    Containerized each of our microservices using Docker to streamline development and testing. Leveraged Puppet to ensure consistent infrastructure upon deployment to self-managed Ubuntu VMs on our OpenStack platform.
                                 </li>
                                 <li>
                                     Served as primary point of contact for high-priority production issues affecting data protection and fleet communication, ensuring maximum uptime and service reliability.

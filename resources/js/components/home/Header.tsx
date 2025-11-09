@@ -4,10 +4,10 @@ export default function Header() {
     return (
         <div className="flex flex-col gap-[64px]">
             <div className="w-2xl">
-                <div className="text-7xl font-bold tracking-tight bg">
+                <div className="text-7xl font-bold tracking-tight text-shadow-md text-shadow-neo/50">
                     Ricardo Colom
                 </div>
-                <div className="text-4xl font-extralight tracking-tight text-neo">
+                <div className="text-4xl font-extralight tracking-tight text-neo text-shadow-md text-shadow-neo/50">
                     Software Engineer
                 </div>
             </div>
