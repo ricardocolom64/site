@@ -49,7 +49,7 @@ export default function WorkExperience() {
     return (
         <div className="w-3xl self-center">
             <div className="flex justify-end">
-                <a href="#" className="flex items-center text-neutral-300 hover:text-neutral-100 transition-all">
+                <a href="#" className="flex items-center text-neutral-300  hover:text-neutral-100 transition-all">
                     <ArrowIcon />
                     <div className="ml-2 font-medium self-center">
                         Résumé
@@ -69,7 +69,7 @@ export default function WorkExperience() {
             <div className="bg-dark/50 p-8 border-2 border-neo rounded-b-lg relative">
                 <div className="text-shadow-md text-shadow-background">
                     <div className="flex justify-between">
-                        <div className="flex flex-row gap-2 text-2xl font-bold text-shadow-sm text-shadow-neo/50">
+                        <div className="flex flex-row gap-2 text-2xl font-bold text-shadow-sm text-shadow-neutral-100/25">
                             <div>
                                 Kaseya
                             </div>
@@ -77,14 +77,14 @@ export default function WorkExperience() {
                                 <LinkIcon />
                             </a>
                         </div>
-                        <div className="flex flex-row gap-2 text-lg font-medium self-end">
+                        <div className="flex flex-row gap-2 text-lg font-medium self-end text-shadow-sm text-shadow-neutral-100/25">
                             <div className="flex flex-row gap-1">
                                 <div className="self-center">
                                     <LocationDotIcon />
                                 </div>
-                                <>
+                                <div>
                                     Miami, FL
-                                </>
+                                </div>
                             </div>
                             <div>
                                 •
@@ -98,7 +98,7 @@ export default function WorkExperience() {
                         {/* SE II Block */}
                         <div className="flex flex-col">
                             <div className="font-light flex justify-between font-code">
-                                <div className="text-shadow-md text-shadow-neutral-100/50">
+                                <div className="text-shadow-sm text-shadow-neutral-100/50">
                                     Software Engineer II
                                 </div>
                                 <div>
