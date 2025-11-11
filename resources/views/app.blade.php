@@ -16,6 +16,11 @@
         @viteReactRefresh
         @vite(['resources/js/app.tsx', "resources/js/pages/{$page['component']}.tsx"])
         @inertiaHead
+
+        <meta property="og:site_name" content="Ricardo Colom - Software Engineer">
+        <meta property="og:description" content="Personal Site">
+        <meta property="og:url" content="https://ricardocolom.sh">
+        <meta property="og:type" content="website">
     </head>
     <body class="font-sans antialiased">
         @inertia
