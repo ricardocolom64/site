@@ -1,8 +1,6 @@
 function ArrowIcon() {
     return (
         <svg
-            width="12"
-            height="12"
             viewBox="0 0 12 12"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -18,8 +16,6 @@ function ArrowIcon() {
 function LocationDotIcon() {
     return (
         <svg
-            width="16"
-            height="16"
             viewBox="0 0 384 512"
             fill="currentColor"
             xmlns="http://www.w3.org/2000/svg"
@@ -33,8 +29,6 @@ function LocationDotIcon() {
 function LinkIcon() {
     return (
         <svg
-            width="20"
-            height="20"
             viewBox="0 0 640 512"
             fill="currentColor"
             xmlns="http://www.w3.org/2000/svg"
@@ -47,12 +41,14 @@ function LinkIcon() {
 
 export default function WorkExperience() {
     return (
-        <div className="w-3xl self-center">
+        <div className="w-sm lg:w-3xl self-center">
             <div className="flex justify-end">
-                <a href="#" className="flex items-center text-neutral-300  hover:text-neutral-100 transition-all">
-                    <ArrowIcon />
-                    <div className="ml-2 font-medium self-center">
-                        Résumé
+                <a href="#" className="group flex items-center text-neutral-500 hover:text-neutral-100 transition-all">
+                    <div className="mr-2 font-medium self-center">
+                        Résumé [PDF]
+                    </div>
+                    <div className="h-3 w-3">
+                        <ArrowIcon />
                     </div>
                 </a>
             </div>
@@ -66,20 +62,23 @@ export default function WorkExperience() {
                     <div className="aspect-square h-3 border-2 border-neo rounded-full"></div>
                 </div>
             </div>
-            <div className="bg-dark/50 p-8 border-2 border-neo rounded-b-lg relative">
+            <div className="bg-dark/50 p-6 lg:p-8 border-2 border-neo rounded-b-lg relative">
                 <div className="text-shadow-md text-shadow-background">
-                    <div className="flex justify-between">
-                        <div className="flex flex-row gap-2 text-2xl font-bold text-shadow-sm text-shadow-neutral-100/25">
-                            <div>
+                    <div className="flex items-center justify-between">
+                        <a
+                            href="https://kaseya.com" target="_blank" rel="noopener noreferrer"
+                            className="group flex flex-row gap-2 text-xl lg:text-2xl font-bold text-shadow-sm text-shadow-neutral-100/25 hover:cursor-pointer"
+                        >
+                            <div className="">
                                 Kaseya
                             </div>
-                            <a href="https://kaseya.com" target="_blank" rel="noopener noreferrer" className="self-end w-6 h-6 text-neutral-500 hover:text-neutral-100 transition-all">
-                                <LinkIcon />
-                            </a>
-                        </div>
-                        <div className="flex flex-row gap-2 text-lg font-medium self-end text-shadow-sm text-shadow-neutral-100/25">
-                            <div className="flex flex-row gap-1">
-                                <div className="self-center">
+                            <div className="h-3 w-3 self-center text-neutral-500 group-hover:text-neutral-100 transition-all">
+                                <ArrowIcon />
+                            </div>
+                        </a>
+                        <div className="flex flex-row gap-2 text-sm lg:text-lg font-medium lg:self-end text-shadow-sm text-shadow-neutral-100/25">
+                            <div className="flex items-center flex-row gap-1">
+                                <div className="self-center mr-0.5 w-2 lg:w-3">
                                     <LocationDotIcon />
                                 </div>
                                 <div>
@@ -96,8 +95,8 @@ export default function WorkExperience() {
                     </div>
                     <div className="flex flex-col gap-6">
                         {/* SE II Block */}
-                        <div className="flex flex-col">
-                            <div className="font-light flex justify-between font-code">
+                        <div className="flex flex-col pt-4 lg:pt-0">
+                            <div className="font-light flex flex-col lg:flex-row text-sm lg:text-base justify-between font-code">
                                 <div className="text-shadow-sm text-shadow-neutral-100/50">
                                     Software Engineer II
                                 </div>
@@ -131,7 +130,7 @@ export default function WorkExperience() {
                         </div>
                         {/* SE I Block */}
                         <div className="flex flex-col">
-                            <div className="font-light flex justify-between font-code">
+                            <div className="font-light flex flex-col lg:flex-row text-sm lg:text-md lg:text-base justify-between font-code">
                                 <div className="text-shadow-md text-shadow-neutral-100/50">
                                     Software Engineer I
                                 </div>
@@ -153,24 +152,18 @@ export default function WorkExperience() {
                             </div>
                         </div>
                         {/* Tools */}
-                        <div className="flex flex-col">
-                            <div className="flex flex-col font-bold my-6 font-code gap-2">
-                                {[
-                                    ['PHP', 'Symfony', 'PHPUnit', 'REST APIs', 'Docker'],
-                                    ['React', 'TypeScript', 'MySQL', 'Puppet', 'Redis'],
-                                    ['WSL', 'GitLab CI/CD', 'Ubuntu', 'Snyk', 'DataDog']
-                                ].map((row, i) => (
-                                    <div key={i} className="flex flex-row justify-left">
-                                        {row.map((tool) => (
-                                            <div key={tool} className="w-[300px] flex justify-center">
-                                                <div className="w-max border-2 border-neo rounded-xl p-1 px-3">
-                                                    {tool}
-                                                </div>
-                                            </div>
-                                        ))}
+                        <div className="flex flex-wrap justify-center gap-2 text-md font-bold my-6 font-code">
+                            {[
+                                'PHP', 'Symfony', 'PHPUnit', 'REST APIs', 'Docker',
+                                'React', 'TypeScript', 'MySQL', 'Puppet', 'Redis',
+                                'WSL', 'GitLab CI/CD', 'Ubuntu', 'Snyk', 'DataDog'
+                            ].map((tool) => (
+                                <div key={tool} className="flex justify-center w-1/3 lg:w-1/6 min-w-max">
+                                    <div className="w-max border-2 border-neo rounded-lg p-1 px-3">
+                                        {tool}
                                     </div>
-                                ))}
-                            </div>
+                                </div>
+                            ))}
                         </div>
                     </div>
 
