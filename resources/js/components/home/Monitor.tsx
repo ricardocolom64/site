@@ -1,4 +1,5 @@
 import { useState } from "react";
+import logo from '@/assets/monitor-logo.svg';
 
 export default function Monitor() {
 
@@ -65,7 +66,7 @@ export default function Monitor() {
                         <div className="absolute top-3 left-1/2 transform -translate-x-1/2">
                             <div className="h-[140px] w-[200px] rounded-t-[5%] border-2 border-b-0 border-neutral-500"></div>
                             <div className="h-[30px] w-[200px] rounded-b-[85%] border-2 border-t-0 border-neutral-500"></div>
-                            <img src="/assets/monitor-logo.svg" alt="monitor-logo" className="absolute top-1/2 translate-y-14.5 left-1/2 transform -translate-x-1/2 w-24" />
+                            <img src={logo} alt="monitor-logo" className="absolute top-1/2 translate-y-14.5 left-1/2 transform -translate-x-1/2 w-24" />
                             {/* Screen */}
                             <div className="h-[110px] w-[120px] border-2 border-neo absolute top-19 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
                             <div className="h-[110px] w-[120px] border-2 border-neutral-500 backdrop-blur-sm absolute top-19 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
