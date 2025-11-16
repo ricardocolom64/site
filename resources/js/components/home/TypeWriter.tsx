@@ -103,7 +103,7 @@ export default function TypeWriter({ debug = false, onTypingDone }: TypeWriterPr
                 {
                     !typingDone &&
                     <span
-                        className={`inline-block mt-[3px] ml-[2px] h-[18px] w-[4px] bg-current transition-opacity duration-200
+                        className={`inline-block mt-[1px] lg:mt-[3px] ml-[2px] h-[14px] lg:h-[18px] w-[2px] lg:w-[4px] bg-current transition-opacity duration-200
                         ${isWriting ? "opacity-100" : "animate-blink"}`}
                     >
                         &nbsp;

@@ -17,14 +17,14 @@ export default function Home() {
     }, [typingDone]);
 
     return (
-        <div className="flex flex-col items-center justify-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+        <div className="flex flex-col items-center justify-center min-h-screen p-6 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
             <div className={`${contentVisible ? "opacity-100 h-svh" : "opacity-0"} transition-all duration-400 z-0 fixed inset-0 bg-neo-grid`}></div>
-            <div className={`${typingDone ? "mt-0" : "mt-[40vh]"} w-sm lg:w-190 xl:w-259 transition-all duration-400 ease-in-out z-10`}>
+            <div className={`${typingDone ? "mt-0" : "mt-[40vh]"} w-sm px-6 lg:w-190 xl:w-259 text-xs lg:text-base transition-all duration-400 ease-in-out z-10`}>
                 <TypeWriter onTypingDone={() => setTypingDone(true)} />
             </div>
             <main className="flex flex-col gap-16 row-start-2 items-center sm:items-start z-10">
-                <div className={`pt-4 overflow-hidden flex flex-col gap-16 transition-all duration-500`}>
-                    <div className="flex flex-col justify-center min-w-max xl:flex-row xl:justify-between gap-16 items-center w-sm xl:w-260">
+                <div className={`pt-4 overflow-hidden flex flex-col gap-32 lg:gap-16 transition-all duration-500`}>
+                    <div className="flex flex-col justify-center min-w-max xl:flex-row xl:justify-between gap-32 lg:gap-16 items-center w-sm xl:w-260">
                         <div className={`transition-opacity duration-500 delay-0 ${contentVisible ? "opacity-100" : "opacity-0"}`}>
                             <Header />
                         </div>

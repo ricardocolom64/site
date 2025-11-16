@@ -41,11 +41,14 @@ function LinkIcon() {
 
 export default function WorkExperience() {
     return (
-        <div className="w-sm lg:w-3xl self-center">
+        <div className="w-sm px-6 lg:w-3xl self-center">
             <div className="flex justify-end">
-                <a href="#" className="group flex items-center text-neutral-500 hover:text-neutral-100 transition-all">
-                    <div className="mr-2 font-medium self-center">
-                        Résumé [PDF]
+                <a href="#" className="group flex items-center text-sm lg:text-base font-medium text-neutral-500 hover:text-neutral-100 transition-all">
+                    <div className="mr-2 self-center">
+                        Résumé
+                    </div>
+                    <div className="mr-2 hidden lg:block">
+                        [PDF]
                     </div>
                     <div className="h-3 w-3">
                         <ArrowIcon />
@@ -67,9 +70,9 @@ export default function WorkExperience() {
                     <div className="flex items-center justify-between">
                         <a
                             href="https://kaseya.com" target="_blank" rel="noopener noreferrer"
-                            className="group flex flex-row gap-2 text-xl lg:text-2xl font-bold text-shadow-sm text-shadow-neutral-100/25 hover:cursor-pointer"
+                            className="group flex flex-row gap-2 text-base lg:text-2xl font-bold text-shadow-sm text-shadow-neutral-100/25 hover:cursor-pointer"
                         >
-                            <div className="">
+                            <div>
                                 Kaseya
                             </div>
                             <div className="h-3 w-3 self-center text-neutral-500 group-hover:text-neutral-100 transition-all">
@@ -152,7 +155,7 @@ export default function WorkExperience() {
                             </div>
                         </div>
                         {/* Tools */}
-                        <div className="flex flex-wrap justify-center gap-2 text-md font-bold my-6 font-code">
+                        <div className="flex flex-wrap justify-around lg:justify-center gap-2 text-md font-bold my-6 font-code">
                             {[
                                 'PHP', 'Symfony', 'PHPUnit', 'REST APIs', 'Docker',
                                 'React', 'TypeScript', 'MySQL', 'Puppet', 'Redis',

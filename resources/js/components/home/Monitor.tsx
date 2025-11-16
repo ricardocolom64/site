@@ -49,7 +49,7 @@ export default function Monitor() {
     };
 
     return (
-        <div className="flex flex-col w-sm lg:w-3xl xl:w-sm">
+        <div className="flex flex-col w-sm px-6 lg:w-3xl xl:w-sm">
             <div className="bg-dark/50 h-6 border-2 border-neo border-b-0 rounded-t-lg flex w-[100%] justify-end items-center relative">
                 <div className="absolute left-4 bottom-1 bg-background text-shadow-sm text-shadow-neo/50 shadow-[0px_0px_20px_0px_#0A0A0A] w-max h-max text-2xl font-bold px-1">
                     Socials
