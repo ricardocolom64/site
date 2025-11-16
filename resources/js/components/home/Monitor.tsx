@@ -61,14 +61,14 @@ export default function Monitor() {
             </div>
             <div className="bg-dark/50 relative">
                 <div className="border-2 border-neo rounded-b-lg px-8 py-6 flex flex-col justify-center items-center relative">
-                    <div className="h-[300px] w-[230px] bg-background rounded-t-[3%] border-2 border-b-0 border-neo-grey-secondary relative">
-                        <div className="absolute top-6 left-1/2 transform -translate-x-1/2">
-                            <div className="h-[140px] w-[200px] rounded-t-[5%] border-2 border-b-0 bg-neo-grey border-neo-grey-secondary">
-                            </div>
-                            <div className="h-[25px] w-[200px] rounded-b-[85%] border-2 border-t-0 bg-neo-grey border-neo-grey-secondary">
-                            </div>
+                    <div className="h-[300px] w-[230px] rounded-t-[3%] border-2 border-b-0 border-neutral-500 relative">
+                        <div className="absolute top-3 left-1/2 transform -translate-x-1/2">
+                            <div className="h-[140px] w-[200px] rounded-t-[5%] border-2 border-b-0 border-neutral-500"></div>
+                            <div className="h-[30px] w-[200px] rounded-b-[85%] border-2 border-t-0 border-neutral-500"></div>
+                            <img src="/assets/monitor-logo.svg" alt="monitor-logo" className="absolute top-1/2 translate-y-14.5 left-1/2 transform -translate-x-1/2 w-24" />
                             {/* Screen */}
-                            <div className="h-[110px] w-[120px] border-2 border-neo-grey-secondary bg-background absolute top-19 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                            <div className="h-[110px] w-[120px] border-2 border-neo absolute top-19 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
+                            <div className="h-[110px] w-[120px] border-2 border-neutral-500 backdrop-blur-sm absolute top-19 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
                                 <div className="flex flex-col text-sm font-code m-4">
                                     {
                                         socials.map((social, index) => {
@@ -96,75 +96,78 @@ export default function Monitor() {
                             </div>
                             <div className="h-[140px] w-[200px] left-1/2 absolute transform -translate-x-1/2">
                                 {/* Company */}
-                                <div className="h-[14px] w-[70px] rounded-full border-2 border-[#1F1F1F] left-1/2 top-4 absolute transform -translate-x-1/2">
+                                <div className="h-[14px] w-[70px] rounded-full border-2 border-neutral-500 left-1/2 top-4 absolute transform -translate-x-1/2">
                                 </div>
                                 <div className="h-[70px] w-[70px] left-2 top-10 absolute">
                                     {/* Up */}
                                     <div
                                         onClick={() => { handlePrev(); handleButtonPress("up"); }}
-                                        className="group hover:border-neutral-500 transition-colors duration-200 h-[24px] w-[24px] rounded-t-sm border-2 border-b-0 border-[#1F1F1F] left-1/2 top-0 transform -translate-x-1/2 absolute"
+                                        className="group bg-neo-grey-secondary hover:border-neo transition-colors duration-400 h-[24px] w-[24px] rounded-t-sm border-2 border-b-0 border-neutral-500 left-1/2 top-0 transform -translate-x-1/2 absolute z-20"
                                     >
-                                        <div className={`${pressedButtons.up ? "border-b-neo duration-200" : "border-b-[#1F1F1F] group-hover:border-t-neutral-500 duration-400"} transition-colors w-0 h-0 border-l-[6px] border-l-transparent border-b-[8px] border-r-[6px] border-r-transparent left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 absolute`}>
+                                        <div className={`${pressedButtons.up ? "border-b-neo duration-200" : "border-neutral-500 duration-400"} transition-colors w-0 h-0 border-l-[6px] border-l-transparent border-b-[8px] border-r-[6px] border-r-transparent left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 absolute`}>
                                         </div>
                                     </div>
                                     {/* Left */}
                                     <div
                                         onClick={() => { handleButtonPress("left"); }}
-                                        className="group hover:border-neutral-500 transition-colors duration-200 h-[24px] w-[24px] rounded-l-sm border-2 border-r-0 border-[#1F1F1F] left-0 top-1/2 transform -translate-y-1/2 absolute"
+                                        className="group bg-neo-grey-secondary hover:border-neo transition-colors duration-400 h-[24px] w-[24px] rounded-l-sm border-2 border-r-0 border-neutral-500 left-[1px] top-1/2 transform -translate-y-1/2 absolute z-20"
                                     >
-                                        <div className={`${pressedButtons.left ? "border-r-neo duration-200" : "border-r-[#1F1F1F] group-hover:border-r-neutral-500 duration-400"} transition-colors w-0 h-0 border-t-[6px] border-t-transparent border-r-[8px] border-b-[6px] border-b-transparent left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 absolute`}>
+                                        <div className={`${pressedButtons.left ? "border-r-neo duration-200" : "border-neutral-500 duration-400"} transition-colors w-0 h-0 border-t-[6px] border-t-transparent border-r-[8px] border-b-[6px] border-b-transparent left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 absolute`}>
                                         </div>
                                     </div>
                                     {/* Right */}
                                     <div
                                         onClick={() => { handleButtonPress("right"); }}
-                                        className="group hover:border-neutral-500 transition-colors duration-200 h-[24px] w-[24px] rounded-r-sm border-2 border-l-0 border-[#1F1F1F] right-0 top-1/2 transform -translate-y-1/2 absolute"
+                                        className="group bg-neo-grey-secondary hover:border-neo transition-colors duration-400 h-[24px] w-[24px] rounded-r-sm border-2 border-l-0 border-neutral-500 right-0 top-1/2 transform -translate-y-1/2 absolute z-20"
                                     >
-                                        <div className={`${pressedButtons.right ? "border-l-neo duration-200" : "border-l-[#1F1F1F] group-hover:border-l-neutral-500 duration-400"} transition-colors w-0 h-0 border-t-[6px] border-t-transparent border-l-[8px] border-b-[6px] border-b-transparent left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 absolute`}>
+                                        <div className={`${pressedButtons.right ? "border-l-neo duration-200" : "border-neutral-500 duration-400"} transition-colors w-0 h-0 border-t-[6px] border-t-transparent border-l-[8px] border-b-[6px] border-b-transparent left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 absolute`}>
                                         </div>
                                     </div>
                                     {/* Down */}
                                     <div
                                         onClick={() => { handleNext(); handleButtonPress("down"); }}
-                                        className="group hover:border-neutral-500 transition-colors duration-200 h-[24px] w-[24px] rounded-b-sm border-2 border-t-0 border-[#1F1F1F] left-1/2 bottom-0 transform -translate-x-1/2 absolute"
+                                        className="group bg-neo-grey-secondary hover:border-neo transition-colors duration-400 h-[24px] w-[24px] rounded-b-sm border-2 border-t-0 border-neutral-500 left-1/2 bottom-0 transform -translate-x-1/2 absolute z-20"
                                     >
-                                        <div className={
-                                            `${pressedButtons.down ? "border-t-neo duration-200" : "border-t-[#1F1F1F] group-hover:border-t-neutral-500 duration-400"} transition-colors w-0 h-0 border-l-[6px] border-l-transparent border-t-[8px] border-r-[6px] border-r-transparent left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 absolute`}>
+                                        <div className={`${pressedButtons.down ? "border-t-neo duration-200" : "border-neutral-500 duration-400"} transition-colors w-0 h-0 border-l-[6px] border-l-transparent border-t-[8px] border-r-[6px] border-r-transparent left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 absolute`}>
                                         </div>
                                     </div>
                                     {/* Center */}
-                                    <div className="h-[24px] w-[24px] left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 absolute">
+                                    <div className="bg-neo-grey-secondary h-[24px] w-[24px] left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 absolute">
                                     </div>
                                 </div>
                                 {/* A and B */}
                                 <div className="h-[70px] w-[70px] right-2 top-10 absolute font-code select-none">
                                     {/* B */}
-                                    <div className="group hover:border-neutral-500 transition-colors duration-200 h-[30px] w-[30px] rounded-full border-2 border-[#1F1F1F] left-0 top-7 absolute">
-                                        <div className="text-[#1F1F1F] group-hover:text-neutral-500 duration-400 font-bold absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 ">
+                                    <div
+                                        onClick={() => handleButtonPress("b")}
+                                        className="group hover:border-neo transition-colors duration-400 h-[30px] w-[30px] rounded-full border-2 border-neutral-500 bg-neo-grey-secondary left-0 top-7 absolute"
+                                    >
+                                        <div className={`${pressedButtons.b ? "text-neo duration-200" : "text-neutral-500 duration-400 "} font-bold absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2`}>
                                             B
                                         </div>
                                     </div>
                                     {/* A */}
                                     <div
                                         onClick={() => handleButtonPress("a")}
-                                        className="group hover:border-neutral-500 transition-colors duration-200 h-[30px] w-[30px] rounded-full border-2 border-[#1F1F1F] right-0 bottom-7 absolute">
-                                        <div className="text-[#1F1F1F] group-hover:text-neutral-500 duration-400 font-bold absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                                        className="group hover:border-neo transition-colors duration-400 h-[30px] w-[30px] rounded-full border-2 border-neutral-500 bg-neo-grey-secondary right-0 bottom-7 absolute"
+                                    >
+                                        <div className={`${pressedButtons.a ? "text-neo duration-200" : "text-neutral-500 duration-400 "} font-bold absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2`}>
                                             A
                                         </div>
                                     </div>
                                 </div>
                                 <div className="h-[16px] w-[70px] left-1/2 bottom-0 absolute transform -translate-x-1/2">
                                     {/* Start */}
-                                    <div className="h-[12px] w-[30px] rounded-full border-2 border-[#1F1F1F] left-0 bottom-0 absolute">
+                                    <div className="h-[12px] w-[30px] rounded-full border-2 border-neutral-500 bg-neo-grey-secondary left-0 bottom-0 absolute">
                                     </div>
                                     {/* Select */}
-                                    <div className="h-[12px] w-[30px] rounded-full border-2 border-[#1F1F1F] right-0 bottom-0 absolute">
+                                    <div className="h-[12px] w-[30px] rounded-full border-2 border-neutral-500 bg-neo-grey-secondary right-0 bottom-0 absolute">
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div className="h-[50px] w-[230px] bg-background rounded-b-[85%] border-2 border-t-0 border-[#1F1F1F]">
+                    <div className="h-[50px] w-[230px] rounded-b-[85%] border-2 border-t-0 border-neutral-500">
                     </div>
                 </div>
             </div>

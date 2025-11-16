@@ -101,7 +101,7 @@ export default function WorkExperience() {
                                 <div className="text-shadow-sm text-shadow-neutral-100/50">
                                     Software Engineer II
                                 </div>
-                                <div>
+                                <div className="text-neutral-500">
                                     Spring 2024 - Present
                                 </div>
                             </div>
@@ -135,7 +135,7 @@ export default function WorkExperience() {
                                 <div className="text-shadow-md text-shadow-neutral-100/50">
                                     Software Engineer I
                                 </div>
-                                <div>
+                                <div className="text-neutral-500">
                                     Fall 2022 - Spring 2024
                                 </div>
                             </div>
