@@ -9,7 +9,7 @@ type TypeWriterProps = {
 export default function TypeWriter({ debug = false, onTypingDone }: TypeWriterProps) {
     const phrases = [
         { phrase: "./", charDelay: 300 },
-        { phrase: "ricardocolom.sh", charDelay: 50 },
+        { phrase: "ricardocolom.com", charDelay: 50 },
     ];
     const initialDelay = 1000;
     const phraseDelay = 500;

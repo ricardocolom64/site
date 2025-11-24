@@ -8,7 +8,7 @@ router.on('navigate', () => {
     window.scrollTo(0, 0);
 });
 
-const appName = import.meta.env.VITE_APP_NAME || './ricardocolom.sh';
+const appName = import.meta.env.VITE_APP_NAME || 'Ricardo Colom';
 
 createInertiaApp({
     title: (title) => title ? `${title} - ${appName}` : appName,
