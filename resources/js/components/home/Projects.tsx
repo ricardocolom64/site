@@ -1,8 +1,7 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 export default function Projects() {
     const [activeCard, setActiveCard] = useState(0);
-    const [isHovering, setIsHovering] = useState(false);
 
     const WebApp = () => {
         return (
