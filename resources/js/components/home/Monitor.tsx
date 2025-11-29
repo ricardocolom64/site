@@ -103,7 +103,7 @@ export default function Monitor() {
                                     {/* Up */}
                                     <div
                                         onClick={() => { handlePrev(); handleButtonPress("up"); }}
-                                        className="group bg-neo-grey-secondary hover:border-neo transition-colors duration-400 h-[24px] w-[24px] rounded-t-sm border-2 border-b-0 border-neutral-500 left-1/2 top-0 transform -translate-x-1/2 absolute z-20"
+                                        className="group bg-neo-grey-secondary hover:border-neo hover:cursor-pointer transition-colors duration-200 h-[24px] w-[24px] rounded-t-sm border-2 border-b-0 border-neutral-500 left-1/2 top-0 transform -translate-x-1/2 absolute z-20"
                                     >
                                         <div className={`${pressedButtons.up ? "border-b-neo duration-200" : "border-neutral-500 duration-400"} transition-colors w-0 h-0 border-l-[6px] border-l-transparent border-b-[8px] border-r-[6px] border-r-transparent left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 absolute`}>
                                         </div>
@@ -111,7 +111,7 @@ export default function Monitor() {
                                     {/* Left */}
                                     <div
                                         onClick={() => { handleButtonPress("left"); }}
-                                        className="group bg-neo-grey-secondary hover:border-neo transition-colors duration-400 h-[24px] w-[24px] rounded-l-sm border-2 border-r-0 border-neutral-500 left-[1px] top-1/2 transform -translate-y-1/2 absolute z-20"
+                                        className="group bg-neo-grey-secondary hover:border-neo hover:cursor-pointer transition-colors duration-200 h-[24px] w-[24px] rounded-l-sm border-2 border-r-0 border-neutral-500 left-[1px] top-1/2 transform -translate-y-1/2 absolute z-20"
                                     >
                                         <div className={`${pressedButtons.left ? "border-r-neo duration-200" : "border-neutral-500 duration-400"} transition-colors w-0 h-0 border-t-[6px] border-t-transparent border-r-[8px] border-b-[6px] border-b-transparent left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 absolute`}>
                                         </div>
@@ -119,7 +119,7 @@ export default function Monitor() {
                                     {/* Right */}
                                     <div
                                         onClick={() => { handleButtonPress("right"); }}
-                                        className="group bg-neo-grey-secondary hover:border-neo transition-colors duration-400 h-[24px] w-[24px] rounded-r-sm border-2 border-l-0 border-neutral-500 right-0 top-1/2 transform -translate-y-1/2 absolute z-20"
+                                        className="group bg-neo-grey-secondary hover:border-neo hover:cursor-pointer transition-colors duration-200 h-[24px] w-[24px] rounded-r-sm border-2 border-l-0 border-neutral-500 right-0 top-1/2 transform -translate-y-1/2 absolute z-20"
                                     >
                                         <div className={`${pressedButtons.right ? "border-l-neo duration-200" : "border-neutral-500 duration-400"} transition-colors w-0 h-0 border-t-[6px] border-t-transparent border-l-[8px] border-b-[6px] border-b-transparent left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 absolute`}>
                                         </div>
@@ -127,7 +127,7 @@ export default function Monitor() {
                                     {/* Down */}
                                     <div
                                         onClick={() => { handleNext(); handleButtonPress("down"); }}
-                                        className="group bg-neo-grey-secondary hover:border-neo transition-colors duration-400 h-[24px] w-[24px] rounded-b-sm border-2 border-t-0 border-neutral-500 left-1/2 bottom-0 transform -translate-x-1/2 absolute z-20"
+                                        className="group bg-neo-grey-secondary hover:border-neo hover:cursor-pointer transition-colors duration-200 h-[24px] w-[24px] rounded-b-sm border-2 border-t-0 border-neutral-500 left-1/2 bottom-0 transform -translate-x-1/2 absolute z-20"
                                     >
                                         <div className={`${pressedButtons.down ? "border-t-neo duration-200" : "border-neutral-500 duration-400"} transition-colors w-0 h-0 border-l-[6px] border-l-transparent border-t-[8px] border-r-[6px] border-r-transparent left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 absolute`}>
                                         </div>
@@ -141,7 +141,7 @@ export default function Monitor() {
                                     {/* B */}
                                     <div
                                         onClick={() => handleButtonPress("b")}
-                                        className="group hover:border-neo transition-colors duration-400 h-[30px] w-[30px] rounded-full border-2 border-neutral-500 bg-neo-grey-secondary left-0 top-7 absolute"
+                                        className="group hover:border-neo hover:cursor-pointer transition-colors duration-200 h-[30px] w-[30px] rounded-full border-2 border-neutral-500 bg-neo-grey-secondary left-0 top-7 absolute"
                                     >
                                         <div className={`${pressedButtons.b ? "text-neo duration-200" : "text-neutral-500 duration-400 "} font-bold absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2`}>
                                             B
@@ -150,7 +150,7 @@ export default function Monitor() {
                                     {/* A */}
                                     <div
                                         onClick={() => handleButtonPress("a")}
-                                        className="group hover:border-neo transition-colors duration-400 h-[30px] w-[30px] rounded-full border-2 border-neutral-500 bg-neo-grey-secondary right-0 bottom-7 absolute"
+                                        className="group hover:border-neo hover:cursor-pointer transition-colors duration-200 h-[30px] w-[30px] rounded-full border-2 border-neutral-500 bg-neo-grey-secondary right-0 bottom-7 absolute"
                                     >
                                         <div className={`${pressedButtons.a ? "text-neo duration-200" : "text-neutral-500 duration-400 "} font-bold absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2`}>
                                             A
