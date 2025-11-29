@@ -4,6 +4,7 @@ import Monitor from '../components/home/Monitor';
 import Projects from '@/components/home/Projects';
 import { useEffect, useState } from 'react';
 import TypeWriter from '@/components/home/TypeWriter';
+import { Head } from '@inertiajs/react';
 
 export default function Home() {
     const [typingDone, setTypingDone] = useState(false);
@@ -22,6 +23,10 @@ export default function Home() {
             <div className={`${typingDone ? "mt-0" : "mt-[40vh]"} w-sm px-6 lg:w-190 xl:w-259 text-xs lg:text-base transition-all duration-400 ease-in-out z-10`}>
                 <TypeWriter onTypingDone={() => setTypingDone(true)} />
             </div>
+            {
+                contentVisible &&
+                <Head title="Home" />
+            }
             <main className="flex flex-col gap-16 row-start-2 items-center sm:items-start z-10">
                 <div className={`pt-4 overflow-hidden flex flex-col gap-32 lg:gap-16 transition-all duration-500`}>
                     <div className="flex flex-col justify-center min-w-max xl:flex-row xl:justify-between gap-32 lg:gap-16 items-center w-sm xl:w-260">

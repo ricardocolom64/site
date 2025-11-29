@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title inertia>{{ config('app.name', './ricardocolom.sh') }}</title>
+        <title inertia></title>
 
         <link rel="icon" href="/favicon.ico" sizes="any">
         <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -19,7 +19,7 @@
 
         <meta property="og:site_name" content="Ricardo Colom - Software Engineer">
         <meta property="og:description" content="Personal Site">
-        <meta property="og:url" content="https://ricardocolom.sh">
+        <meta property="og:url" content="https://ricardocolom.com">
         <meta property="og:type" content="website">
     </head>
     <body class="font-sans antialiased">

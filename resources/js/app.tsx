@@ -8,10 +8,11 @@ router.on('navigate', () => {
     window.scrollTo(0, 0);
 });
 
-const appName = import.meta.env.VITE_APP_NAME || 'Ricardo Colom';
+const initAppName = '$ ';
+const appName = import.meta.env.VITE_APP_NAME || 'Ricardo Colom'
 
 createInertiaApp({
-    title: (title) => title ? `${title} - ${appName}` : appName,
+    title: (title) => title ? `${title} · ${appName}` : initAppName,
     resolve: (name) => resolvePageComponent(`./pages/${name}.tsx`, import.meta.glob('./pages/**/*.tsx')),
     setup({ el, App, props }) {
         const root = createRoot(el);

@@ -55,6 +55,11 @@ export default function TypeWriter({ debug = false, onTypingDone }: TypeWriterPr
         return () => clearTimeout(timeout);
     }, [isWriting, phraseIndex, charIndex, phrases]);
 
+    useEffect(() => {
+        document.title = `$ ${displayedText}▍`;
+    }, [displayedText, typingDone]);
+
+
     useEffect(
         () => {
             const timeout = setTimeout(() => setIsWriting(true), initialDelay);
