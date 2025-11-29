@@ -2,7 +2,7 @@ import AgeCounter from "./AgeCounter";
 
 export default function Header() {
     return (
-        <div className="flex flex-col gap-8 xl:gap-16 w-sm px-6 lg:w-xl">
+        <div className="flex flex-col gap-4 xl:gap-8 w-sm px-6 lg:w-xl">
             <div>
                 <div className="text-4xl lg:text-7xl font-bold tracking-tight text-shadow-md text-shadow-neo/50">
                     Ricardo Colom
@@ -12,7 +12,9 @@ export default function Header() {
                 </div>
             </div>
             <div className="text-sm lg:text-lg">
-                Hi! I’m Rick.{" "}
+                Hi! I’m Rick.
+                <br />
+                <br />
                 <AgeCounter />
                 <br />
                 <br />

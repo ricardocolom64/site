@@ -41,7 +41,7 @@ function LinkIcon() {
 
 export default function WorkExperience() {
     return (
-        <div className="w-sm px-6 lg:w-3xl self-center">
+        <div className="w-sm px-4 lg:w-3xl self-center">
             <div className="flex justify-end">
                 <a href="#" className="group flex items-center text-sm lg:text-base font-medium text-neutral-500 hover:text-neutral-100 transition-all">
                     <div className="mr-2 self-center">
@@ -65,7 +65,7 @@ export default function WorkExperience() {
                     <div className="aspect-square h-3 border-2 border-neo rounded-full"></div>
                 </div>
             </div>
-            <div className="bg-dark/50 p-6 lg:p-8 border-2 border-neo rounded-b-lg relative">
+            <div className="bg-dark/50 p-6 lg:p-8 border-2 border-neo rounded-b-lg relative text-sm lg:text-base">
                 <div className="text-shadow-md text-shadow-background">
                     <div className="flex items-center justify-between">
                         <a
@@ -155,14 +155,17 @@ export default function WorkExperience() {
                             </div>
                         </div>
                         {/* Tools */}
-                        <div className="flex flex-wrap justify-around lg:justify-center gap-2 text-md font-bold my-6 font-code">
+                        <div className="flex flex-wrap justify-center gap-2 text-md font-bold my-6 font-code -mx-8">
                             {[
                                 'PHP', 'Symfony', 'PHPUnit', 'REST APIs', 'Docker',
                                 'React', 'TypeScript', 'MySQL', 'Puppet', 'Redis',
                                 'WSL', 'GitLab CI/CD', 'Ubuntu', 'Snyk', 'DataDog'
-                            ].map((tool) => (
-                                <div key={tool} className="flex justify-center w-1/3 lg:w-1/6 min-w-max">
-                                    <div className="w-max border-2 border-neo rounded-lg p-1 px-3">
+                            ].map(tool => (
+                                <div
+                                    key={tool}
+                                    className="flex justify-center items-center whitespace-nowrap flex-[1_1_calc(50%-0.5rem)] lg:flex-[1_1_calc(20%-0.5rem)] max-w-[calc(50%-0.5rem)] lg:max-w-[calc(20%-0.5rem)]"
+                                >
+                                    <div className="justify-center items-center border-2 border-neo rounded-lg px-3 py-1">
                                         {tool}
                                     </div>
                                 </div>
