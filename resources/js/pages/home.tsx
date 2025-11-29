@@ -40,9 +40,9 @@ export default function Home() {
                     <div className={`self-center transition-opacity duration-500 delay-400 ${contentVisible ? "opacity-100" : "opacity-0"}`}>
                         <WorkExperience />
                     </div>
-                    {/* <div className={`self-center opacity-0 transition-opacity duration-500 delay-600 ${contentVisible ? "opacity-100" : ""}`}>
+                    <div className={`self-center opacity-0 transition-opacity duration-500 delay-600 ${contentVisible ? "opacity-100" : ""}`}>
                         <Projects />
-                    </div> */}
+                    </div>
                 </div>
             </main>
         </div>
