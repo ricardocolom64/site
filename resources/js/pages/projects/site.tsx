@@ -10,8 +10,8 @@ export default function Site() {
         <>
             <Head title="Site" />
             <Window name="Site">
-                <div className="w-7xl">
-                    some content here...
+                <div className="w-7xl max-w-[calc(100vw-12px)] py-64 text-center text-xs lg:text-sm font-code">
+                    Under construction, please try again later.
                 </div>
             </Window>
         </>

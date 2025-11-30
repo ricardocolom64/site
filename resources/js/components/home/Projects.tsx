@@ -33,6 +33,7 @@ export default function Projects() {
             type: "web",
             title: "Personal Site",
             description: "You're on it. Deployed onto my VPS.",
+            year: "2025",
             tools: ["Traefik", "Laravel", "PHP", "React", "TypeScript", "Tailwind CSS"],
             href: "/projects/site"
         },
@@ -40,6 +41,7 @@ export default function Projects() {
             type: "web",
             title: "HHA Pay",
             description: "Proprietary healthcare payroll web app for a local family business.",
+            year: "2024",
             tools: ["Laravel", "PHP", "React", "TypeScript"],
             href: "#"
         },
@@ -47,6 +49,7 @@ export default function Projects() {
             type: "mobile",
             title: "Truth or Drink (Unofficial)",
             description: "The viral Truth or Drink card game by Cut, now as an unofficial mobile port. Played with friends at few parties.",
+            year: "2022",
             tools: ["React Native", "JavaScript"],
             href: "#"
         },
@@ -54,6 +57,7 @@ export default function Projects() {
             type: "web",
             title: "Aliens Took My Friend",
             description: "Your fellow astronaut friend has been kidnapped and taken onboard an alien spaceship. Developed in less than 36 hours for KnightHacks 2021.",
+            year: "2021",
             tools: ["Unity", "C#", "Blender"],
             href: "#"
         }
@@ -61,7 +65,7 @@ export default function Projects() {
 
     return (
         <Window name="Projects">
-            <div className="px-6 lg:w-4xl self-center py-6 flex gap-2 w-full">
+            <div className="px-6 lg:w-4xl self-center py-6 gap-2 w-full flex">
                 {projectData.map((project, index) => (
                     <a
                         key={index}
@@ -82,6 +86,9 @@ export default function Projects() {
                                 {project.title}
                             </div>
                             <div className={`w-full h-full relative z-10 transition-all duration-200 ease-in-out ${activeCard === index ? 'opacity-100' : 'opacity-0'}`}>
+                                <div className={`w-24px h-24px bg-neo-grey rounded-sm border-2 border-neutral-500 px-2 text-xs absolute top-4 right-4`}>
+                                    {project.year}
+                                </div>
                                 <div className={`w-full h-full flex absolute bottom-10.5`}>
                                     <div
                                         className={`w-full flex flex-col gap-4 items-center justify-center transition-all duration-300`}

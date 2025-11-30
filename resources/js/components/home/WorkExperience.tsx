@@ -58,7 +58,7 @@ export default function WorkExperience() {
                 </a>
             </div>
             <Window name="Work Experience">
-                <div className="w-sm px-4 lg:w-4xl p-6 lg:p-8">
+                <div className="w-full lg:w-4xl p-4 lg:p-8">
                     <div className="flex items-center justify-between">
                         <a
                             href="https://kaseya.com" target="_blank" rel="noopener noreferrer"
@@ -95,7 +95,7 @@ export default function WorkExperience() {
                                 <div className="text-shadow-sm text-shadow-neutral-100/50">
                                     Software Engineer II
                                 </div>
-                                <div className="text-neutral-500 text-end">
+                                <div className="text-neutral-500">
                                     Spring 2024 - Present
                                 </div>
                             </div>
