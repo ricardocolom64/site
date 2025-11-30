@@ -1,3 +1,5 @@
+import Window from "../common/Window"
+
 function ArrowIcon() {
     return (
         <svg
@@ -41,7 +43,7 @@ function LinkIcon() {
 
 export default function WorkExperience() {
     return (
-        <div className="w-sm px-4 lg:w-3xl self-center">
+        <>
             <div className="flex justify-end">
                 <a href="#" className="group flex items-center text-sm lg:text-base font-medium text-neutral-500 hover:text-neutral-100 transition-all">
                     <div className="mr-2 self-center">
@@ -55,18 +57,8 @@ export default function WorkExperience() {
                     </div>
                 </a>
             </div>
-            <div className="bg-dark/50 h-6 border-2 border-neo border-b-0 rounded-t-lg  flex w-[100%] justify-end items-center relative">
-                <div className="absolute left-4 bottom-1 bg-background text-shadow-sm text-shadow-neo/50 shadow-[0px_0px_20px_0px_#0A0A0A] w-max h-max text-2xl font-bold px-1">
-                    Work Experience
-                </div>
-                <div className="flex flex-row gap-1.5 pr-1.5">
-                    <div className="aspect-square h-3 border-2 border-neo rounded-full"></div>
-                    <div className="aspect-square h-3 border-2 border-neo rounded-full"></div>
-                    <div className="aspect-square h-3 border-2 border-neo rounded-full"></div>
-                </div>
-            </div>
-            <div className="bg-dark/50 p-6 lg:p-8 border-2 border-neo rounded-b-lg relative text-sm lg:text-base">
-                <div className="text-shadow-md text-shadow-background">
+            <Window name="Work Experience">
+                <div className="w-sm px-4 lg:w-4xl p-6 lg:p-8">
                     <div className="flex items-center justify-between">
                         <a
                             href="https://kaseya.com" target="_blank" rel="noopener noreferrer"
@@ -162,7 +154,7 @@ export default function WorkExperience() {
                             ].map((tool) => (
                                 <div
                                     key={tool}
-                                    className="mx-1 lg:mx-0"
+                                    className="mx-1 lg:mx-2"
                                 >
                                     <div className={`text-center justify-center items-center border-2 border-neo rounded-lg px-3 py-1`}>
                                         {tool}
@@ -171,10 +163,8 @@ export default function WorkExperience() {
                             ))}
                         </div>
                     </div>
-
                 </div>
-
-            </div>
-        </div >
+            </Window>
+        </>
     )
 }
