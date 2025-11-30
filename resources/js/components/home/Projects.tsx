@@ -31,25 +31,29 @@ export default function Projects() {
             type: "web",
             title: "Personal site",
             description: "You're on it, just a site showcasing my experience and projects.",
-            tools: ["Laravel", "PHP", "React", "TypeScript"]
+            tools: ["Laravel", "PHP", "React", "TypeScript"],
+            href: "/projects/site"
         },
         {
             type: "web",
             title: "HHA Pay",
             description: "Proprietary healthcare payroll web app for a local family business.",
-            tools: ["Laravel", "PHP", "React", "TypeScript"]
+            tools: ["Laravel", "PHP", "React", "TypeScript"],
+            href: "#"
         },
         {
             type: "mobile",
             title: "Truth or Drink (Unofficial)",
             description: "The viral Truth or Drink card game by Cut, now as an unofficial mobile port. Played with friends at few parties.",
-            tools: ["React Native", "JavaScript"]
+            tools: ["React Native", "JavaScript"],
+            href: "#"
         },
         {
             type: "web",
             title: "Aliens Took My Friend",
             description: "Your fellow astronaut friend has been kidnapped and taken onboard an alien spaceship. Developed in less than 36 hours for KnightHacks 2021.",
-            tools: ["Unity", "C#", "Blender"]
+            tools: ["Unity", "C#", "Blender"],
+            href: "#"
         }
     ];
 
@@ -75,7 +79,7 @@ export default function Projects() {
                                     setActiveCard(index);
                                 }}
                                 className={`group hover:cursor-pointer font-code transition-all duration-500 ease-in-out ${activeCard === index ? 'w-full backdrop-brightness-75' : 'w-20'}`}
-                                href="#"
+                                href={project.href}
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
