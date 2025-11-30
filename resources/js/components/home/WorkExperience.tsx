@@ -70,16 +70,16 @@ export default function WorkExperience() {
                     <div className="flex items-center justify-between">
                         <a
                             href="https://kaseya.com" target="_blank" rel="noopener noreferrer"
-                            className="group flex flex-row gap-2 text-base lg:text-2xl font-bold text-shadow-sm text-shadow-neutral-100/25 hover:cursor-pointer"
+                            className="group flex flex-row text-lg lg:text-xl font-bold text-shadow-sm text-shadow-neutral-100/25 hover:cursor-pointer"
                         >
                             <div>
                                 Kaseya
                             </div>
-                            <div className="h-3 w-3 self-center text-neutral-500 group-hover:text-neutral-100 transition-all">
+                            <div className="aspect-square w-2 ml-1 lg:ml-2 lg:w-3 self-center text-neutral-500 group-hover:text-neutral-100 transition-all">
                                 <ArrowIcon />
                             </div>
                         </a>
-                        <div className="flex flex-row gap-2 text-sm lg:text-lg font-medium lg:self-end text-shadow-sm text-shadow-neutral-100/25">
+                        <div className="flex flex-row gap-2 text-xs lg:text-base font-medium mb-1 lg:mb-0 self-end text-shadow-sm text-shadow-neutral-100/25">
                             <div className="flex items-center flex-row gap-1">
                                 <div className="self-center mr-0.5 w-2 lg:w-3">
                                     <LocationDotIcon />
@@ -98,16 +98,16 @@ export default function WorkExperience() {
                     </div>
                     <div className="flex flex-col gap-6">
                         {/* SE II Block */}
-                        <div className="flex flex-col pt-4 lg:pt-0">
-                            <div className="font-light flex flex-col lg:flex-row text-sm lg:text-base justify-between font-code">
+                        <div className="flex flex-col lg:pt-0">
+                            <div className="font-light flex flex-col lg:flex-row text-xs lg:text-sm justify-between font-code">
                                 <div className="text-shadow-sm text-shadow-neutral-100/50">
                                     Software Engineer II
                                 </div>
-                                <div className="text-neutral-500">
+                                <div className="text-neutral-500 text-end">
                                     Spring 2024 - Present
                                 </div>
                             </div>
-                            <div className="list-disc flex flex-col self-center mt-6 pl-4 gap-6">
+                            <div className="list-disc flex flex-col self-center mt-4 pl-3.5 gap-6 text-sm">
                                 <li>
                                     Drove projects end-to-end, from initial product discussions and technical decomposition to development, testing, and production release, consistently meeting quarterly goals.
                                     <br />
@@ -133,7 +133,7 @@ export default function WorkExperience() {
                         </div>
                         {/* SE I Block */}
                         <div className="flex flex-col">
-                            <div className="font-light flex flex-col lg:flex-row text-sm lg:text-md lg:text-base justify-between font-code">
+                            <div className="font-light flex flex-col lg:flex-row text-xs lg:text-sm justify-between font-code">
                                 <div className="text-shadow-md text-shadow-neutral-100/50">
                                     Software Engineer I
                                 </div>
@@ -141,7 +141,7 @@ export default function WorkExperience() {
                                     Fall 2022 - Spring 2024
                                 </div>
                             </div>
-                            <div className="list-disc flex flex-col self-center mt-6 pl-4 gap-6">
+                            <div className="list-disc flex flex-col self-center mt-4 pl-4 gap-6 text-sm">
                                 <li>
                                     Collaborated on the development and ownership of multiple Symfony-based PHP microservices running on self-managed Ubuntu VMs with Apache and Nginx web servers.
                                     <br />
@@ -155,17 +155,16 @@ export default function WorkExperience() {
                             </div>
                         </div>
                         {/* Tools */}
-                        <div className="flex flex-wrap justify-center gap-2 text-md font-bold my-6 font-code -mx-8">
+                        <div className="flex flex-wrap justify-center gap-2 text-xs font-bold my-6 font-code">
                             {[
-                                'PHP', 'Symfony', 'PHPUnit', 'REST APIs', 'Docker',
-                                'React', 'TypeScript', 'MySQL', 'Puppet', 'Redis',
-                                'WSL', 'GitLab CI/CD', 'Ubuntu', 'Snyk', 'DataDog'
-                            ].map(tool => (
+                                'PHP', 'Symfony', 'PHPUnit', 'REST APIs', 'Docker', 'React', 'TypeScript', 'MySQL',
+                                'Puppet', 'Redis', 'WSL', 'GitLab CI/CD', 'Ubuntu', 'Snyk', 'DataDog'
+                            ].map((tool) => (
                                 <div
                                     key={tool}
-                                    className="flex justify-center items-center whitespace-nowrap flex-[1_1_calc(50%-0.5rem)] lg:flex-[1_1_calc(20%-0.5rem)] max-w-[calc(50%-0.5rem)] lg:max-w-[calc(20%-0.5rem)]"
+                                    className="mx-1 lg:mx-0"
                                 >
-                                    <div className="justify-center items-center border-2 border-neo rounded-lg px-3 py-1">
+                                    <div className={`text-center justify-center items-center border-2 border-neo rounded-lg px-3 py-1`}>
                                         {tool}
                                     </div>
                                 </div>

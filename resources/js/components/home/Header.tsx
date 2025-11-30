@@ -11,7 +11,7 @@ export default function Header() {
                     Software Engineer
                 </div>
             </div>
-            <div className="text-sm lg:text-lg">
+            <div className="text-sm lg:text-base">
                 Hi! I’m Rick.
                 <br />
                 <br />

@@ -8,10 +8,10 @@ type TypeWriterProps = {
 
 export default function TypeWriter({ debug = false, onTypingDone }: TypeWriterProps) {
     const phrases = [
-        { phrase: "./", charDelay: 300 },
+        { phrase: "./", charDelay: 100 },
         { phrase: "ricardocolom.com", charDelay: 50 },
     ];
-    const initialDelay = 1000;
+    const initialDelay = 500;
     const phraseDelay = 500;
 
     const [isWriting, setIsWriting] = useState(false);
@@ -108,7 +108,7 @@ export default function TypeWriter({ debug = false, onTypingDone }: TypeWriterPr
                 {
                     !typingDone &&
                     <span
-                        className={`inline-block mt-[1px] lg:mt-[3px] ml-[2px] h-[14px] lg:h-[18px] w-[2px] lg:w-[4px] bg-current transition-opacity duration-200
+                        className={`inline-block ml-[2px] h-[14px] lg:h-[18px] w-[2px] lg:w-[4px] bg-current transition-opacity duration-200
                         ${isWriting ? "opacity-100" : "animate-blink"}`}
                     >
                         &nbsp;
