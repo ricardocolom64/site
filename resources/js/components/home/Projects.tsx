@@ -7,9 +7,9 @@ export default function Projects() {
 
     const WebApp = () => {
         return (
-            <div className="w-72 h-48 rounded-lg border-2 rounded-t-lg  border-neutral-500 transition-all duration-200 group-hover:border-neo">
+            <div className="w-72 h-48 rounded-lg border-2 rounded-t-lg border-neutral-500">
                 <div className="flex flex-col justify-start w-full h-full">
-                    <div className="h-6 bg-neo-grey rounded-t-lg border-b-2 border-neutral-500 transition-all duration-200 group-hover:border-neo"></div>
+                    <div className="h-6 bg-neo-grey rounded-t-lg border-b-2 border-neutral-500"></div>
                     <div className="flex-1 bg-background rounded-b-lg"></div>
                 </div>
             </div>
@@ -18,11 +18,11 @@ export default function Projects() {
 
     const MobileApp = () => {
         return (
-            <div className="w-24 h-48 rounded-lg border-2 border-neutral-500 transition-all duration-200 group-hover:border-neo">
+            <div className="w-24 h-48 rounded-lg border-2 border-neutral-500">
                 <div className="flex flex-col justify-start w-full h-full rounded-lg relative">
                     <div className="absolute self-center top-2 w-8 h-2 bg-neo-grey-secondary rounded-md"></div>
                     <div className="flex-1 bg-background rounded-t-lg"></div>
-                    <div className="h-6 bg-neo-grey border-t-2 rounded-b-lg border-neutral-500 transition-all duration-200 group-hover:border-neo"></div>
+                    <div className="h-6 bg-neo-grey border-t-2 rounded-b-lg border-neutral-500"></div>
                 </div>
             </div>
         )
