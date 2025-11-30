@@ -10,9 +10,11 @@ export default function Home() {
     const [typingDone, setTypingDone] = useState(false);
     const [contentVisible, setContentVisible] = useState(false);
 
+    const visibilityDelay = 500;
+
     useEffect(() => {
         if (typingDone) {
-            const timeout = setTimeout(() => setContentVisible(true), 500);
+            const timeout = setTimeout(() => setContentVisible(true), visibilityDelay);
             return () => clearTimeout(timeout);
         }
     }, [typingDone]);
@@ -20,7 +22,7 @@ export default function Home() {
     return (
         <div className="flex flex-col items-center justify-center min-h-screen p-6 pb-20 gap-16 sm:py-20 font-[family-name:var(--font-geist-sans)]">
             <div className={`${contentVisible ? "opacity-100 h-svh" : "opacity-0"} transition-all duration-400 z-0 fixed inset-0 bg-neo-grid`}></div>
-            <div className={`${typingDone ? "mt-0" : "mt-[40vh]"} w-sm px-6 lg:w-190 xl:w-259 text-xs lg:text-base transition-all duration-400 ease-in-out z-10`}>
+            <div className={`${typingDone ? "mt-0" : "mt-[40vh]"} w-sm px-6 lg:w-190 xl:w-259 text-xs lg:text-sm transition-all duration-400 ease-in-out z-10`}>
                 <TypeWriter onTypingDone={() => setTypingDone(true)} />
             </div>
             {
