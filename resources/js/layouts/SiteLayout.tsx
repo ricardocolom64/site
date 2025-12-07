@@ -1,10 +1,15 @@
 import { PropsWithChildren } from "react";
 
 import grid from '@/assets/cylindrical-grid.svg';
+import TypeWriter from "@/components/home/TypeWriter";
 
-export default function SiteLayout({ children }: PropsWithChildren) {
+interface WindowProps {
+    hideHeader?: boolean;
+}
+
+export default function SiteLayout({ children, hideHeader = false }: PropsWithChildren<WindowProps>) {
     return (
-        <div className="flex flex-col items-center justify-center min-h-screen p-6 py-20 font-[family-name:var(--font-geist-sans)]">
+        <div className="flex flex-col items-center justify-start min-h-screen p-6 py-20 font-[family-name:var(--font-geist-sans)]">
             {/* <div className="z-0 fixed inset-0 bg-neo-grid"></div> */}
             <div
                 className="
@@ -25,10 +30,15 @@ export default function SiteLayout({ children }: PropsWithChildren) {
                 />
             </div>
 
-            {/* <div className="z-0 fixed inset-0 bg-neo-grid flex xl:hidden"></div> */}
-
-
-            <main className="flex flex-col gap-4 lg:gap-16 items-center sm:items-start z-10">
+            <main className="flex flex-col gap-4 lg:gap-16 items-center sm:items-start z-10 flex-1">
+                {
+                    !hideHeader && <a
+                        className={`w-full h-min text-xs lg:text-sm transition-all duration-400 ease-in-out z-10`}
+                        href="/"
+                    >
+                        <TypeWriter isStatic />
+                    </a>
+                }
                 {children}
             </main>
         </div>

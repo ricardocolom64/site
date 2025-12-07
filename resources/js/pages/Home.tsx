@@ -24,9 +24,12 @@ export default function Home() {
     return (
         <>
             <div className={`${contentVisible ? "opacity-0" : "opacity-100 h-svh"} transition-all duration-400 -z-10 fixed inset-0 bg-dark`}></div>
-            <div className={`${typingDone ? "mt-0" : "mt-[40vh]"} w-full text-xs lg:text-sm transition-all duration-400 ease-in-out z-10`}>
+            <a
+                className={`${typingDone ? "mt-0" : "mt-[40vh]"} w-full text-xs lg:text-sm transition-all duration-400 ease-in-out z-10`}
+                href="/"
+            >
                 <TypeWriter onTypingDone={() => setTypingDone(true)} />
-            </div>
+            </a>
             {
                 contentVisible &&
                 <Head title="Home" />
@@ -51,4 +54,4 @@ export default function Home() {
     );
 }
 
-Home.layout = (page: ReactNode) => <SiteLayout>{page}</SiteLayout>
+Home.layout = (page: ReactNode) => <SiteLayout hideHeader>{page}</SiteLayout>
