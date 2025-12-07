@@ -8,9 +8,17 @@ Route::get('/', function () {
 })->name('home');
 
 Route::get('/projects/site', function () {
-    return Inertia::render('projects/site');
+    return Inertia::render('Projects/Site');
 })->name('site');
 
-Route::get('/welcome', function () {
-    return Inertia::render('welcome');
-})->name('welcome');
+Route::get('/projects/hha-pay', function () {
+    return Inertia::render('Projects/HHAPay');
+})->name('hha-pay');
+
+Route::get('/projects/truth-or-drink', function () {
+    return Inertia::render('Projects/TruthOrDrink');
+})->name('truth-or-drink');
+
+Route::get('/projects/atmf', function () {
+    return Inertia::render('Projects/ATMF');
+})->name('atmf');

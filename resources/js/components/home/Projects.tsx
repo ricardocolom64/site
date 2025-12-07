@@ -43,7 +43,7 @@ export default function Projects() {
             description: "Proprietary healthcare payroll web app for a local family business.",
             year: "2024",
             tools: ["Laravel", "PHP", "React", "TypeScript"],
-            href: "#"
+            href: "/projects/hha-pay"
         },
         {
             type: "mobile",
@@ -51,7 +51,7 @@ export default function Projects() {
             description: "The viral Truth or Drink card game by Cut, now as an unofficial mobile port. Played with friends at few parties.",
             year: "2022",
             tools: ["React Native", "JavaScript"],
-            href: "#"
+            href: "/projects/truth-or-drink"
         },
         {
             type: "web",
@@ -59,7 +59,7 @@ export default function Projects() {
             description: "Your fellow astronaut friend has been kidnapped and taken onboard an alien spaceship. Developed in less than 36 hours for KnightHacks 2021.",
             year: "2021",
             tools: ["Unity", "C#", "Blender"],
-            href: "#"
+            href: "/projects/atmf"
         }
     ];
 
