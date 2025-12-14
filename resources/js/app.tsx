@@ -8,6 +8,13 @@ router.on('navigate', () => {
     window.scrollTo(0, 0);
 });
 
+if (typeof window !== 'undefined') {
+    // handle cases where scroll restoration happens after initial load
+    window.addEventListener('load', () => {
+        window.scrollTo(0, 0);
+    });
+}
+
 const initAppName = '$ ';
 const appName = import.meta.env.VITE_APP_NAME || 'Ricardo Colom'
 
