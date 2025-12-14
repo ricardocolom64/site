@@ -1,21 +1,10 @@
-import { Head } from '@inertiajs/react';
-import { ReactNode } from 'react';
-
-import SiteLayout from '@/layouts/SiteLayout';
-import Window from '@/components/common/Window';
+import ProjectLayout from '@/layouts/ProjectLayout';
 
 export default function TruthOrDrink() {
 
     return (
-        <>
-            <Head title="Truth or Drink (Unofficial)" />
-            <Window name="Truth or Drink (Unofficial)">
-                <div className="w-7xl max-w-[calc(100vw-12px)] py-64 text-center text-xs lg:text-sm font-code">
-                    Under construction, please try again later.
-                </div>
-            </Window>
-        </>
+        <ProjectLayout name="Truth or Drink">
+            Under construction, please try again later.
+        </ProjectLayout>
     );
 }
-
-TruthOrDrink.layout = (page: ReactNode) => <SiteLayout>{page}</SiteLayout>

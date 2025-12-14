@@ -1,21 +1,10 @@
-import { Head } from '@inertiajs/react';
-import { ReactNode } from 'react';
-
-import SiteLayout from '@/layouts/SiteLayout';
-import Window from '@/components/common/Window';
+import ProjectLayout from '@/layouts/ProjectLayout';
 
 export default function ATMF() {
 
     return (
-        <>
-            <Head title="Aliens Took My Friend" />
-            <Window name="Aliens Took My Friend">
-                <div className="w-7xl max-w-[calc(100vw-12px)] py-64 text-center text-xs lg:text-sm font-code">
-                    Under construction, please try again later.
-                </div>
-            </Window>
-        </>
+        <ProjectLayout name="Aliens Took My Friend">
+            Under construction, please try again later.
+        </ProjectLayout>
     );
 }
-
-ATMF.layout = (page: ReactNode) => <SiteLayout>{page}</SiteLayout>
