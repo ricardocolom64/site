@@ -13,7 +13,7 @@ export default function ProjectLayout({ children, name }: PropsWithChildren<Proj
     return (
         <SiteLayout>
             <Head title={name} />
-            <div className="w-7xl max-w-[calc(100vw-12px)] h-full flex flex-col flex-1 px-4">
+            <div className="w-5xl px-1 max-w-[calc(100vw-42px)] h-full flex flex-col flex-1">
                 <Window name={name}>
                     <div className="text-center text-xs lg:text-sm font-code">
                         {children}

@@ -9,7 +9,7 @@ interface WindowProps {
 
 export default function SiteLayout({ children, hideHeader = false }: PropsWithChildren<WindowProps>) {
     return (
-        <div className="flex flex-col items-center justify-start min-h-screen p-6 py-20 font-[family-name:var(--font-geist-sans)]">
+        <div className="flex flex-col items-center justify-start min-h-screen px-6 pt-20 pb-3 sm:pb-20 font-[family-name:var(--font-geist-sans)]">
             {/* <div className="z-0 fixed inset-0 bg-neo-grid"></div> */}
             <div
                 className="
@@ -33,7 +33,7 @@ export default function SiteLayout({ children, hideHeader = false }: PropsWithCh
             <main className="flex flex-col gap-4 lg:gap-16 items-center sm:items-start z-10 flex-1">
                 {
                     !hideHeader && <a
-                        className={`w-full px-4 h-min text-xs lg:text-sm transition-all duration-400 ease-in-out z-10`}
+                        className={`w-full px-1.5 h-min flex justify-center sm:justify-start -mt-10 sm:mt-0 text-xs lg:text-sm transition-all duration-400 ease-in-out z-10`}
                         href="/"
                     >
                         <TypeWriter isStatic />
