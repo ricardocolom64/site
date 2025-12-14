@@ -2,14 +2,14 @@ import { useEffect, useState } from 'react';
 
 
 type TypeWriterProps = {
-    debug?: boolean,
-    onTypingDone?: () => void;
+    onTypingDone?: () => void,
+    isStatic?: boolean
 };
 
-export default function TypeWriter({ debug = false, onTypingDone }: TypeWriterProps) {
+export default function TypeWriter({ onTypingDone, isStatic = false }: TypeWriterProps) {
     const phrases = [
-        { phrase: "./", charDelay: 100 },
-        { phrase: "ricardocolom.com", charDelay: 50 },
+        { text: "./", charDelay: 100 },
+        { text: "ricardocolom.com", charDelay: 50 },
     ];
     const initialDelay = 500;
     const phraseDelay = 500;
@@ -29,6 +29,16 @@ export default function TypeWriter({ debug = false, onTypingDone }: TypeWriterPr
     }
 
     useEffect(() => {
+        if (isStatic) {
+            let finalText = "";
+            phrases.forEach(phrase => {
+                finalText += phrase.text
+            });
+            setDisplayedText(finalText);
+            setTypingDone(true);
+            return;
+        }
+
         if (!isWriting) return;
 
         if (phraseIndex >= phrases.length) {
@@ -36,15 +46,15 @@ export default function TypeWriter({ debug = false, onTypingDone }: TypeWriterPr
             return;
         }
 
-        const { phrase, charDelay } = phrases[phraseIndex];
-        const phraseDone = charIndex >= phrase.length;
+        const { text, charDelay } = phrases[phraseIndex];
+        const phraseDone = charIndex >= text.length;
 
         // Don't delay for the first character
         const delay = phraseDone ? phraseDelay : charIndex === 0 ? 0 : charDelay;
 
         const timeout = setTimeout(() => {
             if (!phraseDone) {
-                setDisplayedText((prev) => prev + phrase[charIndex]);
+                setDisplayedText((prev) => prev + text[charIndex]);
                 setCharIndex((prev) => prev + 1);
             } else {
                 setPhraseIndex((prev) => prev + 1);
@@ -56,7 +66,9 @@ export default function TypeWriter({ debug = false, onTypingDone }: TypeWriterPr
     }, [isWriting, phraseIndex, charIndex, phrases]);
 
     useEffect(() => {
-        document.title = `$ ${displayedText}▍`;
+        if (!isStatic) {
+            document.title = `$ ${displayedText}▍`;
+        }
     }, [displayedText, typingDone]);
 
 
@@ -76,24 +88,8 @@ export default function TypeWriter({ debug = false, onTypingDone }: TypeWriterPr
     }, [isWriting, phraseIndex, onTypingDone]);
 
     return (
-        <div>
-            {
-                debug && <>
-                    <button
-                        className="bg-red-500 hover:bg-red-700 p-2 mr-2"
-                        onClick={reset}
-                    >
-                        Reset
-                    </button>
-                    <button
-                        className="bg-green-500 hover:bg-green-700 p-2 mr-2"
-                        onClick={() => setIsWriting(true)}
-                    >
-                        Go
-                    </button>
-                </>
-            }
-            <div className="flex space-x-[1px] font-code h-6 w-60">
+        <div className='w-min'>
+            <div className="flex space-x-[1px] font-code h-6">
                 <span className="inline-block mr-1 text-neo">$</span>
 
                 {displayedText.split("").map((char, i) => (

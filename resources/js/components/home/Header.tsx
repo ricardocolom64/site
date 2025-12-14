@@ -2,7 +2,7 @@ import AgeCounter from "./AgeCounter";
 
 export default function Header() {
     return (
-        <div className="flex flex-col gap-4 xl:gap-8 w-sm px-6 lg:w-xl">
+        <div className="flex flex-col gap-4 lg:gap-8 w-full lg:w-xl">
             <div>
                 <div className="text-4xl lg:text-7xl font-bold tracking-tight text-shadow-md text-shadow-neo/50">
                     Ricardo Colom
@@ -11,7 +11,7 @@ export default function Header() {
                     Software Engineer
                 </div>
             </div>
-            <div className="text-sm lg:text-base">
+            <div className="text-sm lg:text-base max-w-2xl">
                 Hi! I’m Rick.
                 <br />
                 <br />
