@@ -34,12 +34,12 @@ export default function Home() {
                 contentVisible &&
                 <Head title="Home" />
             }
-            <div className={`pt-32 sm:pt-4 overflow-hidden flex flex-col gap-16 transition-all duration-500`}>
+            <div className={`pt-16 sm:pt-4 overflow-hidden flex flex-col gap-16 transition-all duration-500`}>
                 <div className="flex flex-col justify-center lg:flex-row lg:justify-between gap-16 items-center lg:items-start">
                     <div className={`transition-opacity duration-500 delay-0 ${contentVisible ? "opacity-100" : "opacity-0"}`}>
                         <Header />
                     </div>
-                    <div className={`pt-32 sm:pt-0 w-full items-center transition-opacity duration-500 delay-200 ${contentVisible ? "opacity-100" : "opacity-0"}`}>
+                    <div className={`pt-16 sm:pt-0 w-full items-center transition-opacity duration-500 delay-200 ${contentVisible ? "opacity-100" : "opacity-0"}`}>
                         <Monitor />
                     </div>
                 </div>
