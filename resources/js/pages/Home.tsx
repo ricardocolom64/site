@@ -25,7 +25,7 @@ export default function Home() {
         <>
             <div className={`${contentVisible ? "opacity-0" : "opacity-100 h-svh"} transition-all duration-400 -z-10 fixed inset-0 bg-dark`}></div>
             <a
-                className={`${typingDone ? "-mt-10 sm:mt-0" : "mt-[30vh] sm:mt-[40vh]"} flex justify-center sm:justify-start w-full text-xs lg:text-sm transition-all duration-400 ease-in-out z-10`}
+                className={`${typingDone ? "-mt-10 sm:mt-0" : "mt-[30vh] sm:mt-[40vh]"} flex justify-center sm:justify-start w-min text-xs lg:text-sm transition-all duration-400 ease-in-out z-10`}
                 href="/"
             >
                 <TypeWriter onTypingDone={() => setTypingDone(true)} />

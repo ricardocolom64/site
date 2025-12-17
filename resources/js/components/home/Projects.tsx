@@ -117,9 +117,12 @@ export default function Projects() {
                                     >
                                         Learn more.
                                     </div>
-                                    <div className="flex flex-row gap-2 overflow-visible">
+                                    <div className="flex gap-2 overflow-visible">
                                         {project.tools.map((tool, index) => (
-                                            <>
+                                            <div
+                                                className="flex flex-row gap-2"
+                                                key={`${index}.${tool}`}
+                                            >
                                                 <div
                                                     key={`${index}.${tool}`}
                                                 >
@@ -131,7 +134,7 @@ export default function Projects() {
                                                         ·
                                                     </div>
                                                 }
-                                            </>
+                                            </div>
                                         ))}
                                     </div>
                                 </div>
