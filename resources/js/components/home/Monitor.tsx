@@ -53,9 +53,9 @@ export default function Monitor() {
     return (
         <Window name="Socials">
             <div className="flex flex-col my-6 items-center relative w-full px-4 xl:w-xs">
-                <div className="h-[300px] w-[230px] rounded-t-[3%] border-2 border-b-0 border-neutral-500 relative">
+                <div className="h-[300px] w-[230px] rounded-t-[2%] border-2 border-b-0 border-neutral-500 relative">
                     <div className="absolute top-3 left-1/2 transform -translate-x-1/2">
-                        <div className="h-[140px] w-[200px] rounded-t-[5%] border-2 border-b-0 border-neutral-500"></div>
+                        <div className="h-[140px] w-[200px] rounded-t-[3%] border-2 border-b-0 border-neutral-500"></div>
                         <div className="h-[30px] w-[200px] rounded-b-[85%] border-2 border-t-0 border-neutral-500"></div>
                         <img src={logo} alt="monitor-logo" className="absolute top-1/2 translate-y-14.5 left-1/2 transform -translate-x-1/2 w-24" />
                         {/* Screen */}

@@ -32,19 +32,6 @@ function LocationDotIcon() {
 export default function WorkExperience() {
     return (
         <>
-            <div className="flex justify-end">
-                <a href="#" className="group flex items-center text-sm lg:text-base font-medium text-neutral-500 hover:text-neutral-100 transition-all">
-                    <div className="mr-2 self-center">
-                        Résumé
-                    </div>
-                    <div className="mr-2 hidden lg:block">
-                        [PDF]
-                    </div>
-                    <div className="h-3 w-3">
-                        <ArrowIcon />
-                    </div>
-                </a>
-            </div>
             <Window name="Work Experience">
                 <div className="w-full lg:w-4xl p-4 lg:p-8">
                     <div className="flex items-center justify-between">
@@ -52,7 +39,7 @@ export default function WorkExperience() {
                             href="https://kaseya.com" target="_blank" rel="noopener noreferrer"
                             className="group flex flex-row text-lg lg:text-xl font-bold text-shadow-sm text-shadow-neutral-100/25 hover:cursor-pointer"
                         >
-                            <div>
+                            <div className="font-folk leading-0">
                                 Kaseya
                             </div>
                             <div className="aspect-square w-2 ml-1 lg:ml-2 lg:w-3 self-center text-neutral-500 group-hover:text-neutral-100 transition-all">
@@ -144,7 +131,7 @@ export default function WorkExperience() {
                                     key={tool}
                                     className="mx-1 lg:mx-2"
                                 >
-                                    <div className={`text-center justify-center items-center border-2 border-neo rounded-lg px-3 py-1`}>
+                                    <div className={`text-center justify-center items-center border-2 border-neo rounded-sm px-3 py-1`}>
                                         {tool}
                                     </div>
                                 </div>

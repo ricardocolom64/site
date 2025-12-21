@@ -65,14 +65,14 @@ export default function Projects() {
 
     return (
         <Window name="Projects">
-            <div className="px-6 lg:w-4xl self-center py-6 gap-2 w-full flex">
+            <div className="p-4 lg:w-4xl self-center gap-2 w-full flex">
                 {projectData.map((project, index) => (
                     <a
                         key={index}
                         onMouseEnter={() => {
                             setActiveCard(index);
                         }}
-                        className={`group hover:cursor-pointer font-code rounded-lg transition-all duration-500 ease-in-out ${activeCard === index ? 'w-full backdrop-brightness-75' : 'w-16'}`}
+                        className={`group hover:cursor-pointer font-code rounded-sm transition-all duration-500 ease-in-out ${activeCard === index ? 'w-full backdrop-brightness-75' : 'w-16'}`}
                         href={project.href}
                         target="_blank"
                         rel="noopener noreferrer"
@@ -80,9 +80,9 @@ export default function Projects() {
                         <div
                             className={`h-96 relative transition-all overflow-hidden`}
                         >
-                            <div className={`w-full h-full absolute rounded-lg transition-all duration-200 ${activeCard === index ? 'border-neo' : 'border-neutral-500'}`}></div>
-                            <div className={`w-full h-full absolute z-30 border-2 rounded-lg transition-all duration-200 ${activeCard === index ? 'border-neutral-500 group-hover:border-neo shadow-[inset_0_0_8px_8px_#73737325] group-hover:shadow-[inset_0_0_8px_8px_#00FF9E25]' : 'border-neo-grey-secondary'}`}></div>
-                            <div className={`w-max absolute top-4 left-[36px] origin-top-left rotate-90 text-sm text-shadow-sm text-shadow-neutral-100/25 z-20 transition-all duration-200 ${activeCard === index ? 'opacity-0' : 'opacity-100'}`}>
+                            <div className={`w-full h-full absolute rounded-sm transition-all duration-200 ${activeCard === index ? 'border-neo' : 'border-neutral-500'}`}></div>
+                            <div className={`w-full h-full absolute z-30 border-2 rounded-sm transition-all duration-200 ${activeCard === index ? 'border-neutral-500 group-hover:border-neo shadow-[inset_0_0_8px_8px_#73737325] group-hover:shadow-[inset_0_0_8px_8px_#00FF9E25]' : 'border-neo-grey-secondary'}`}></div>
+                            <div className={`w-max absolute top-4 left-9 origin-top-left rotate-90 text-sm text-shadow-sm text-shadow-neutral-100/25 z-20 transition-all duration-200 ${activeCard === index ? 'opacity-0' : 'opacity-100'}`}>
                                 {project.title}
                             </div>
                             <div className={`w-full h-full relative z-10 transition-all duration-200 ease-in-out ${activeCard === index ? 'opacity-100' : 'opacity-0'}`}>

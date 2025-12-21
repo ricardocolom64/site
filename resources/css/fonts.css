@@ -1,3 +1,15 @@
+/* --- Folk Pro --- */
+
+@font-face {
+    font-family: 'Folk Pro';
+    src: url('/fonts/FolkPro-B.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* --- Geist --- */
+
 @font-face {
     font-family: 'Geist';
     src: url('/fonts/Geist-Thin.woff2') format('woff2');

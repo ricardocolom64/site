@@ -9,7 +9,7 @@ interface WindowProps {
 
 export default function SiteLayout({ children, hideHeader = false }: PropsWithChildren<WindowProps>) {
     return (
-        <div className="flex flex-col items-center justify-start min-h-screen px-6 pt-20 pb-3 sm:pb-20 font-[family-name:var(--font-geist-sans)]">
+        <div className="flex flex-col items-center justify-start min-h-screen px-6 pt-20 pb-3 sm:pb-20">
             {/* <div className="z-0 fixed inset-0 bg-neo-grid"></div> */}
             <div
                 className="

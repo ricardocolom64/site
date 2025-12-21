@@ -25,7 +25,7 @@ export default function Window({
                 <div className="w-max flex flex-row relative">
                     <div className="flex-1 flex flex-row">
                         {/* hacky trick just to get the proper width... */}
-                        <div className="w-max text-2xl font-bold -z-5 px-2 opacity-0">
+                        <div className="w-max text-xl font-bold font-folk -z-5 px-2 opacity-0 ">
                             {name}
                         </div>
                         <div className="absolute left-0 top-0 min-w-8 flex-1 flex flex-row w-full">
@@ -38,12 +38,12 @@ export default function Window({
                                 }}
                             />
                         </div>
-                        <div className="absolute left-0 bottom-2 pl-3 py-1 text-shadow-sm text-shadow-neo/50 w-max h-max text-2xl font-bold text-right">
+                        <div className="absolute left-0 bottom-2 pl-3 py-2 text-shadow-sm text-shadow-neo/50 w-max h-max text-xl font-bold font-folk text-right">
                             {name}
                         </div>
                     </div>
                 </div>
-                <div className="w-full flex flex-row">
+                <div className="w-full flex flex-row relative">
                     <img src={stack} />
                     <div
                         className="w-full"
@@ -53,17 +53,29 @@ export default function Window({
                         }}
                     />
                     <img src={corner_tr} />
+                    {/* <div className="group hover:cursor-pointer absolute left-11 top-3.25 min-w-32 w-[calc(100%-66px)] h-4.5">
+                        <div className="opacity-25 group-hover:opacity-100 transition-all duration-200 bg-neutral-400 group-hover:bg-neo">
+                            <div className="absolute h-full w-full bg-neo skew-x-[-37.5deg] rounded-xs" />
+                        </div>
+                        <div className="relative left-0.5 bottom-px w-full h-full self-center text-center font-code font-bold text-sm">
+                            {"Resume.pdf"}
+                        </div>
+                    </div> */}
+                    {/* <div className="absolute right-3 top-3 font-code text-xs p-1 px-12 bg-neo-grey/25 border-2 border-neutral-500 rounded-xs hover:border-neo transition-all duration-200 hover:underline hover:text-neo hover:cursor-pointer">
+                        {"Resume.pdf"}
+                    </div> */}
                 </div>
             </div>
             <div className="w-full flex flex-row">
                 <div
-                    className="w-2 min-h-4"
+                    className="w-2 min-h-4 mr-0.5"
                     style={{
                         backgroundImage: `url(${bar_v_small_l})`,
                         backgroundRepeat: 'repeat-y'
                     }}
                 />
                 <div className="relative flex flex-col justify-center items-center flex-1 w-full">
+                    <div className="absolute flex w-full h-full bg-dark/50 -z-5 mask-t-from-95%" />
                     {children}
                 </div>
                 <div
