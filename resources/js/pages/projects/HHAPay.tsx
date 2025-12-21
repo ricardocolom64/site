@@ -4,7 +4,9 @@ export default function HHAPay() {
 
     return (
         <ProjectLayout name="HHA Pay">
-            Under construction, please try again later.
+            <div className="flex flex-col min-h-128 justify-center">
+                Under construction, please try again later.
+            </div>
         </ProjectLayout>
     );
 }

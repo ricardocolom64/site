@@ -8,6 +8,8 @@ import WorkExperience from '../components/home/WorkExperience';
 import Projects from '@/components/home/Projects';
 import TypeWriter from '@/components/home/TypeWriter';
 
+import temp from '../../../public/temp.svg';
+
 export default function Home() {
     const [typingDone, setTypingDone] = useState(false);
     const [contentVisible, setContentVisible] = useState(false);

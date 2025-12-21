@@ -1,4 +1,5 @@
 import { useState } from "react";
+import WindowOld from "../common/WindowOld";
 import Window from "../common/Window";
 import logo from '@/assets/monitor-logo.svg';
 
