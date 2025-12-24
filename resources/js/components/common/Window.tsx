@@ -38,7 +38,7 @@ export default function Window({
                                 }}
                             />
                         </div>
-                        <div className="absolute left-0 bottom-2 pl-3 py-2 text-shadow-sm text-shadow-neo/50 w-max h-max text-xl font-bold font-folk text-right">
+                        <div className="absolute left-0 bottom-2 pl-3 py-2 text-shadow-sm text-shadow-neo/25 w-max h-max text-xl font-bold font-folk text-right">
                             {name}
                         </div>
                     </div>
