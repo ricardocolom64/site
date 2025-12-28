@@ -48,7 +48,7 @@ export default function Projects() {
         {
             type: "mobile",
             title: "Truth or Drink (Unofficial)",
-            description: "The viral Truth or Drink card game by Cut, now as an unofficial mobile port. Played with friends at few parties.",
+            description: "The viral Truth or Drink card game by Cut, now as an unofficial mobile port. Played with friends at a few parties.",
             year: "2022",
             tools: ["React Native", "JavaScript"],
             href: "/projects/truth-or-drink"
@@ -56,7 +56,7 @@ export default function Projects() {
         {
             type: "web",
             title: "Aliens Took My Friend",
-            description: "Your fellow astronaut friend has been kidnapped and taken onboard an alien spaceship. Developed in less than 36 hours for KnightHacks 2021.",
+            description: "Your fellow astronaut friend has been kidnapped and taken onboard an alien spaceship. Developed in under 36 hours.",
             year: "2021",
             tools: ["Unity", "C#", "Blender"],
             href: "/projects/atmf"
@@ -65,7 +65,8 @@ export default function Projects() {
 
     return (
         <Window name="Projects">
-            <div className="p-4 lg:w-4xl self-center gap-2 w-full flex">
+            {/* Desktop view */}
+            <div className="hidden lg:flex p-4 self-center gap-2 w-full">
                 {projectData.map((project, index) => (
                     <a
                         key={index}
@@ -82,7 +83,7 @@ export default function Projects() {
                         >
                             <div className={`w-full h-full absolute rounded-sm transition-all duration-200 ${activeCard === index ? 'border-neo' : 'border-neutral-500'}`}></div>
                             <div className={`w-full h-full absolute z-30 border-2 rounded-sm transition-all duration-200 ${activeCard === index ? 'border-neutral-500 group-hover:border-neo shadow-[inset_0_0_8px_8px_#73737325] group-hover:shadow-[inset_0_0_8px_8px_#00FF9E25]' : 'border-neo-grey-secondary'}`}></div>
-                            <div className={`w-max absolute top-4 left-9 origin-top-left rotate-90 text-sm text-shadow-sm text-shadow-neutral-100/25 z-20 transition-all duration-200 ${activeCard === index ? 'opacity-0' : 'opacity-100'}`}>
+                            <div className={`w-max absolute top-4 left-9 origin-top-left rotate-90 text-sm text-shadow-sm text-shadow-neutral-100/25 font-folk z-20 transition-all duration-200 ${activeCard === index ? 'opacity-0' : 'opacity-100'}`}>
                                 {project.title}
                             </div>
                             <div className={`w-full h-full relative z-10 transition-all duration-200 ease-in-out ${activeCard === index ? 'opacity-100' : 'opacity-0'}`}>
@@ -93,7 +94,7 @@ export default function Projects() {
                                     <div
                                         className={`w-full flex flex-col gap-4 items-center justify-center transition-all duration-300`}
                                     >
-                                        <div className="min-w-96 text-center text-sm text-shadow-sm text-shadow-neutral-100/25">
+                                        <div className="min-w-96 text-center text-sm text-shadow-sm text-shadow-neutral-100/25 font-folk">
                                             {project.title}
                                         </div>
                                         {
@@ -111,7 +112,7 @@ export default function Projects() {
                                 <div className="w-158 mb-4">
                                     {project.description}
                                 </div>
-                                <div className="mt-2 flex flex-row justify-between font-semibold w-158">
+                                <div className="mt-2 flex flex-row justify-between font-semibold w-full">
                                     <div
                                         className={`group-hover:underline group-hover:text-neo group-hover:cursor-pointer transition-all duration-200`}
                                     >
@@ -143,7 +144,56 @@ export default function Projects() {
                     </a>
                 ))
                 }
-            </div >
+            </div>
+            {/* Mobile view */}
+            <div className="flex lg:hidden w-full flex-col p-4 gap-4 justify-center items-center">
+                {projectData.map((project, index) => (
+                    <a
+                    key={index}
+                    className={`group hover:cursor-pointer font-code rounded-sm transition-all duration-500 ease-in-out w-full h-112 backdrop-brightness-75`}
+                    href={project.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >
+                        <div
+                            className={`h-full w-full min-w-xs relative transition-all overflow-hidden`}
+                        >
+                            <div className={`w-full h-full absolute rounded-sm transition-all duration-200 border-neutral-500`}></div>
+                            <div className={`w-full h-full absolute z-30 border-2 rounded-sm transition-all duration-200 border-neutral-500 group-hover:border-neo shadow-[inset_0_0_8px_8px_#73737325] group-hover:shadow-[inset_0_0_8px_8px_#00FF9E25]`}></div>
+                            <div className={`w-full h-full relative z-10 transition-all duration-200 ease-in-out opacity-100`}>
+                                <div className={`w-24px h-24px bg-neo-grey rounded-sm border-2 border-neutral-500 px-2 text-xs absolute top-4 right-4`}>
+                                    {project.year}
+                                </div>
+                                <div className={`w-full h-full flex absolute bottom-10.5`}>
+                                    <div
+                                        className={`w-full flex flex-col gap-4 items-center justify-center transition-all duration-300`}
+                                    >
+                                        <div className="min-w-96 text-center text-sm text-shadow-sm text-shadow-neutral-100/25 font-folk">
+                                            {project.title}
+                                        </div>
+                                        {
+                                            project.type === "web" && (<WebApp />)
+                                        }
+                                        {
+                                            project.type === "mobile" && (<MobileApp />)
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                className={`absolute z-40 bottom-0 pb-5 px-5 w-full text-xs text-center font-light transition-all duration-200`}
+                            >
+                                <div className="w-full mb-4 min-h-20 flex flex-col justify-center">
+                                    {project.description}
+                                </div>
+                                <div className="mt-2 text-center font-semibold w-full group-hover:underline group-hover:text-neo group-hover:cursor-pointer transition-all duration-200">
+                                    Learn more.
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                ))}
+            </div>
         </Window >
     );
 }

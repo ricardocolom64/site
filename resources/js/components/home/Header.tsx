@@ -11,20 +11,22 @@ export default function Header() {
                     Software Engineer
                 </div>
             </div>
-            <div className="text-sm lg:text-base mx-8 sm:mx-0 sm:max-w-2xl text-center sm:text-left">
-                {"Hi! I'm Rick."}
-                <br />
-                <br />
-                <AgeCounter />
-                <br />
-                <br />
-                I build full-stack apps with a strong focus on scalable, efficient, and maintainable backend systems. I solve real business problems with code that delivers.
-                <br />
-                <br />
-                I enjoy lifting weights, dancing, and hanging out with friends.
-                <br />
-                <br />
-                Above all, I just care about getting better at what I do every day.
+            <div className="text-sm lg:text-base sm:mx-0 sm:max-w-2xl text-center lg:text-left flex flex-col items-center lg:items-start gap-4 sm:gap-6">
+                <div className="max-w-102 lg:max-w-full">
+                    {"Hi! I'm Rick."}
+                </div>
+                <div className="max-w-102 lg:max-w-full">
+                    <AgeCounter />
+                </div>
+                <div className="max-w-88 lg:max-w-full">
+                    I build full-stack apps with a strong focus on scalable, efficient, and maintainable backend systems. I solve real business problems with code that delivers.
+                </div>
+                <div className="max-w-full lg:max-w-full">
+                    I enjoy lifting weights, dancing, and hanging out with friends.
+                </div>
+                <div className="max-w-102 lg:max-w-full">
+                    Above all, I just care about getting better at what I do every day.
+                </div>
             </div>
         </div>
     )

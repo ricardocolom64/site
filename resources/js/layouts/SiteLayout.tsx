@@ -23,9 +23,9 @@ export default function SiteLayout({ children, hideHeader = false }: PropsWithCh
                     alt=""
                     className="
                     w-svw
-                    [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_50%,transparent_100%)]
-                    [mask-repeat:no-repeat]
-                    [mask-position:center]
+                    mask-[radial-gradient(ellipse_50%_50%_at_50%_50%,#000_50%,transparent_100%)]
+                    mask-no-repeat
+                    mask-center
                     object-cover"
                 />
             </div>
@@ -33,7 +33,7 @@ export default function SiteLayout({ children, hideHeader = false }: PropsWithCh
             <main className="flex flex-col gap-4 lg:gap-16 items-center sm:items-start z-10 flex-1">
                 {
                     !hideHeader && <a
-                        className={`w-min px-1.5 h-min flex justify-center sm:justify-start -mt-10 sm:mt-0 text-xs lg:text-sm transition-all duration-400 ease-in-out z-10`}
+                        className={`w-min px-1.5 h-min flex justify-center sm:justify-start -mt-10 text-xs lg:text-sm transition-all duration-400 ease-in-out z-10`}
                         href="/"
                     >
                         <TypeWriter isStatic />

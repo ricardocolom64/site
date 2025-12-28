@@ -110,7 +110,7 @@ export default function WorkExperience() {
                             </div>
                             <div className="list-disc flex flex-col self-center mt-4 pl-4 gap-6 text-sm">
                                 <li>
-                                    Collaborated on the development and ownership of multiple Symfony-based PHP microservices running on self-managed Ubuntu VMs with Apache and Nginx web servers.
+                                    Collaborated on the development and ownership of multiple Symfony-based PHP microservices running on self-managed Ubuntu VMs with Apache and NGINX web servers.
                                     <br />
                                     <br />
                                     Proactively engaged with teams across the organization to anticipate blockers and resolve technical questions early.
