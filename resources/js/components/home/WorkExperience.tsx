@@ -131,7 +131,7 @@ export default function WorkExperience() {
                                     key={tool}
                                     className="mx-1 lg:mx-2"
                                 >
-                                    <div className={`text-center justify-center items-center border-2 border-neo rounded-sm px-3 py-1`}>
+                                    <div className="text-center justify-center items-center border-2 border-neo rounded-sm px-3 py-1">
                                         {tool}
                                     </div>
                                 </div>

@@ -88,7 +88,7 @@ export default function TypeWriter({ onTypingDone, isStatic = false }: TypeWrite
     }, [isWriting, phraseIndex, onTypingDone]);
 
     return (
-        <div className='w-min'>
+        <div className="w-min">
             <div className="flex space-x-[1px] font-code h-6">
                 <span className="inline-block mr-1 text-neo">$</span>
 
