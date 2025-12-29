@@ -75,8 +75,6 @@ export default function Projects() {
                         }}
                         className={`group hover:cursor-pointer font-code rounded-sm transition-all duration-500 ease-in-out ${activeCard === index ? 'w-full backdrop-brightness-75' : 'w-16'}`}
                         href={project.href}
-                        target="_blank"
-                        rel="noopener noreferrer"
                     >
                         <div
                             className="h-96 relative transition-all overflow-hidden"
@@ -149,11 +147,11 @@ export default function Projects() {
             <div className="flex lg:hidden w-full flex-col p-4 gap-4 justify-center items-center">
                 {projectData.map((project, index) => (
                     <a
-                    key={index}
-                    className="group hover:cursor-pointer font-code rounded-sm transition-all duration-500 ease-in-out w-full h-112 backdrop-brightness-75"
-                    href={project.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                        key={index}
+                        className="group hover:cursor-pointer font-code rounded-sm transition-all duration-500 ease-in-out w-full h-112 backdrop-brightness-75"
+                        href={project.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
                     >
                         <div
                             className="h-full w-full min-w-xs relative transition-all overflow-hidden"
