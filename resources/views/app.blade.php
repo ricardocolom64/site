@@ -18,6 +18,7 @@
         @inertiaHead
 
         <meta property="og:site_name" content="Ricardo Colom - Software Engineer">
+        <meta property="og:title" content="Ricardo Colom - Software Engineer">
         <meta property="og:description" content="Personal Site">
         <meta property="og:url" content="https://ricardocolom.com">
         <meta property="og:type" content="website">
