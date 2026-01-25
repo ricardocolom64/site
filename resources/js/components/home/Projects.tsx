@@ -85,7 +85,7 @@ export default function Projects() {
                                 {project.title}
                             </div>
                             <div className={`w-full h-full relative z-10 transition-all duration-200 ease-in-out ${activeCard === index ? 'opacity-100' : 'opacity-0'}`}>
-                                <div className="w-24px h-24px bg-neo-grey rounded-sm border-2 border-neutral-500 px-2 text-xs absolute top-4 right-4">
+                                <div className="w-24px h-24px text-xs absolute top-4 right-4">
                                     {project.year}
                                 </div>
                                 <div className="w-full h-full flex absolute bottom-10.5">
