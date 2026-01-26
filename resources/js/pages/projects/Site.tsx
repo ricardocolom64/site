@@ -29,11 +29,11 @@ export default function Site() {
                 </p>
                 <p>On the application site, this site is built with <b>Laravel (PHP)</b>, <b>React (TypeScript)</b>, and <b>Tailwind CSS</b>.</p>
                 <p>
-                    On the server side, I use <b>Traefik</b> as a reverse proxy to handle the HTTP to HTTPS redirection and issuing TLS certificates via ACME.
+                    On the server side, I use <b>Traefik</b> as a reverse proxy to handle the HTTP to HTTPS redirection and to issue TLS certificates via ACME.
                     I am using <b>NGINX</b> as the webserver to serve the application itself.
                 </p>
                 <a
-                    href="https://github.com/ricardocolom64/AliensTookMyFriend" target="_blank" rel="noopener noreferrer"
+                    href="https://github.com/ricardocolom64/site" target="_blank" rel="noopener noreferrer"
                     className="underline">
                     Source available here.
                 </a>

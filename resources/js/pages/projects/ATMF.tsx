@@ -49,7 +49,7 @@ export default function ATMF() {
                     Built using <b>Unity (C#)</b>, and <b>Blender</b>.
                 </p>
                 <a
-                    href="https://github.com/ricardocolom64/site" target="_blank" rel="noopener noreferrer"
+                    href="https://github.com/ricardocolom64/AliensTookMyFriend" target="_blank" rel="noopener noreferrer"
                     className="underline">
                     Source available here.
                 </a>
