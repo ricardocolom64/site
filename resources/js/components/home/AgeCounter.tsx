@@ -5,9 +5,13 @@ export default function AgeCounter() {
 
     const getAge = useCallback(() => {
         const now = new Date();
-        const years = now.getFullYear() - birthDate.getFullYear();
         const lastBirthday = new Date(now.getFullYear(), 4, 1);
-        if (now < lastBirthday) lastBirthday.setFullYear(now.getFullYear() - 1);
+
+        if (now < lastBirthday) {
+            lastBirthday.setFullYear(now.getFullYear() - 1);
+        }
+
+        const years = lastBirthday.getFullYear() - birthDate.getFullYear();
         const days = Math.floor(
             (now.getTime() - lastBirthday.getTime()) / (1000 * 60 * 60 * 24)
         );
