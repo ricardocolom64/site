@@ -35,10 +35,9 @@ function Site() {
                     <li>Deployment through GitHub Actions</li>
                 </ul>
             </p>
-            <p>On the application site, this site is built with <b>Laravel (PHP)</b>, <b>React (TypeScript)</b>, and <b>Tailwind CSS</b>.</p>
+            <p>On the application site, this site is built with <b>TanStack Start</b>, <b>React (TypeScript)</b>, and <b>Tailwind CSS</b>.</p>
             <p>
-                On the server side, I use <b>Traefik</b> as a reverse proxy to handle the HTTP to HTTPS redirection and to issue TLS certificates via ACME.
-                I am using <b>NGINX</b> as the webserver to serve the application itself.
+                On the server side, I use <b>Caddy</b> as the webserver. It serves the application itself, handles the HTTP to HTTPS redirection, and issues TLS certificates via ACME.
             </p>
             <a
                 href="https://github.com/ricardocolom64/site" target="_blank" rel="noopener noreferrer"

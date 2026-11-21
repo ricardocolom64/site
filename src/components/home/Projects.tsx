@@ -35,7 +35,7 @@ export default function Projects() {
             title: "Personal Site",
             description: "You're on it. Deployed onto my VPS.",
             year: "2025",
-            tools: ["Traefik", "Laravel", "PHP", "React", "TypeScript", "Tailwind CSS"],
+            tools: ["Caddy", "TanStack Start", "React", "TypeScript", "Tailwind CSS"],
             href: "/projects/site"
         },
         {

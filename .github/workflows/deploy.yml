@@ -3,37 +3,34 @@ name: Deploy to VPS
 on:
   push:
     branches: ["main", "deploy"]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy
+  cancel-in-progress: false
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
+    env:
+      SITE_DIR: /var/www/vhosts/site
+      KEEP_RELEASES: 5
+
     steps:
     - name: Checkout
       uses: actions/checkout@v4
 
-    - name: Setup PHP
-      uses: shivammathur/setup-php@v2
-      with:
-        php-version: "8.4"
-        tools: composer
-
-    - name: Install Composer dependencies
-      run: composer install --no-dev --optimize-autoloader
-
     - name: Setup Node
       uses: actions/setup-node@v4
       with:
-        node-version: '20'
-        cache: 'npm'
+        node-version-file: .nvmrc
+        cache: npm
 
-    - name: Build frontend assets
+    - name: Build
       run: |
         npm ci
         npm run build
-
-    - name: Install Deployer
-      run: composer global require deployer/deployer
 
     - name: Setup SSH key
       run: |
@@ -42,16 +39,28 @@ jobs:
         chmod 600 ~/.ssh/id_ed25519
         ssh-keyscan -H ${{ secrets.SERVER_HOST }} >> ~/.ssh/known_hosts
 
-    - name: Upload secrets
-      run: |
-        ssh -i ~/.ssh/id_ed25519 ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }} \
-          "mkdir -p /var/www/vhosts/site/shared"
-        echo "${{ secrets.ENV_PROD }}" | ssh -i ~/.ssh/id_ed25519 ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }} \
-          "cat > /var/www/vhosts/site/shared/.env"
-
-    - name: Run Deployer
+    - name: Upload release
       env:
-        SERVER_HOST: ${{ secrets.SERVER_HOST }}
-        SERVER_USER: ${{ secrets.SERVER_USER }}
+        TARGET: ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }}
       run: |
-        ~/.composer/vendor/bin/dep deploy -vvv
+        release="$SITE_DIR/releases/$(date -u +%Y%m%d%H%M%S)-${GITHUB_SHA::7}"
+        echo "RELEASE=$release" >> "$GITHUB_ENV"
+        ssh "$TARGET" "mkdir -p '$release'"
+        rsync -az --delete dist/client/ "$TARGET:$release/"
+
+    - name: Publish release
+      env:
+        TARGET: ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }}
+      run: |
+        ssh "$TARGET" bash -s -- "$SITE_DIR" "$RELEASE" "$KEEP_RELEASES" <<'EOF'
+        set -euo pipefail
+        site_dir="$1" release="$2" keep="$3"
+
+        # Swap the symlink atomically so nginx never sees a missing `current`.
+        ln -sfn "$release" "$site_dir/current.next"
+        mv -Tf "$site_dir/current.next" "$site_dir/current"
+
+        # Newest first, so the release just published is always kept.
+        cd "$site_dir/releases"
+        ls -1t | tail -n +$((keep + 1)) | xargs -r rm -rf --
+        EOF
