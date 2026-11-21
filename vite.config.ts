@@ -1,23 +1,25 @@
-import { wayfinder } from '@laravel/vite-plugin-wayfinder';
 import tailwindcss from '@tailwindcss/vite';
-import react from '@vitejs/plugin-react';
-import laravel from 'laravel-vite-plugin';
+import { tanstackStart } from '@tanstack/react-start/plugin/vite';
+import viteReact from '@vitejs/plugin-react';
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-    plugins: [
-        laravel({
-            input: ['resources/css/app.css', 'resources/js/app.tsx'],
-            ssr: 'resources/js/ssr.tsx',
-            refresh: true,
-        }),
-        react(),
-        tailwindcss(),
-        wayfinder({
-            formVariants: true,
-        }),
-    ],
-    esbuild: {
-        jsx: 'automatic',
+    server: {
+        port: 3000,
     },
+    resolve: {
+        tsconfigPaths: true,
+    },
+    plugins: [
+        tailwindcss(),
+        tanstackStart({
+            prerender: {
+                enabled: true,
+                crawlLinks: true,
+                filter: ({ path }) => path !== '/projects',
+            },
+        }),
+        // React's plugin must come after Start's.
+        viteReact(),
+    ],
 });
